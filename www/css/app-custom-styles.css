@@ -1,0 +1,845 @@
+
+/** STYLE FOR PARSLEY VALIDATION LIBRARY **/
+.parsley-errors-list {
+    display: none !important;
+}
+/** STYLE FOR VALIDATION TOOLTIP **/
+[data-hint]:after {
+    font-size: 0.8em !important;
+}
+label[data-hint]:after {
+    font-size: 1em !important;
+}
+
+
+/** MODAL LOADER STYLE BEGINS **/
+#loader-modal-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#loader-modal-icon {
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+    width: 30%;
+}
+#loader-modal-message {
+    -webkit-flex-grow: 7;
+    flex-grow: 7;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+    width: 70%;
+}
+#loader-modal .dialog-container--material {
+    background-color: #000000;
+}
+/** MODAL LOADER STYLE ENDS **/
+
+
+/** STYLE FOR THE USER SIGIN-IN PAGE INPUT FIELD BEGINS **/
+#user-phone .text-input--material{
+    text-align: center;
+    color: #311b92;
+}
+#secure-pin .text-input--material{
+    -webkit-text-security: disc;
+    text-align: center;
+    color: #311b92;
+}
+#user-phone .text-input--material__label{
+    color: #311b92;
+}
+#secure-pin .text-input--material__label{
+    color: #311b92;
+}
+
+/** STYLE FOR THE USER SIGIN-IN PAGE INPUT FIELD ENDS **/
+
+
+/** STYLE FOR THE SIGN-IN PAGE ICON ANIMATION BEGINS **/
+#sign-in-page ons-icon.first {
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 3;
+}
+#sign-in-page ons-icon.second {
+    -webkit-animation-delay: 1.4s;
+    -webkit-animation-iteration-count: 4;
+}
+/** STYLE FOR THE SIGN-IN PAGE ICON ANIMATION ENDS **/
+
+#forgot-pin-popover .popover--material__content {
+    background-color: rgb(237, 231, 246);
+    color: #311b92;
+}
+
+
+/** STYLE FOR CREATE ACCOUNT PAGE BEGINS **/
+#create-account-page #create-secure-pin {
+    -webkit-text-security: disc;
+}
+/** STYLE FOR CREATE ACCOUNT PAGE ENDS **/
+
+
+/** STYLE FOR THE USER RESET-PIN PAGE INPUT FIELD BEGINS **/
+#reset-user-phone .text-input--material{
+    text-align: center;
+    color: #311b92;
+}
+#reset-master-code .text-input--material{
+    -webkit-text-security: disc;
+    text-align: center;
+    color: #311b92;
+}
+/** STYLE FOR THE USER SIGIN-IN PAGE INPUT FIELD ENDS **/
+
+
+/** STYLE FOR ONBOARDING PAGE BEGINS **/
+#onboarding-page .page--material__background {
+    background-image: -webkit-linear-gradient(top, #EDE7F6 0%, #cebfff 35%, #EDE7F6 37%, #b388ff 100%);
+}
+/** STYLE FOR ONBOARDING PAGE ENDS **/
+
+
+/** STYLE FOR MAIN MENU PAGE BEGINS **/
+#main-menu-page .page--material__background {
+    background-color: #EDE7F6;
+}
+/** STYLE FOR MAIN MENU PAGE ENDS **/
+
+
+/** STYLE FOR BANK SELECT ELEMENT IN VERIFY ACCOUNT PAGE BEGINS **/
+#verify-account-page .page--material__content .dropdown-content{
+    max-height: 200px !important;
+    overflow-y: scroll;
+    background-color: rgb(237,231,246);
+}
+#verify-account-page .page--material__content .dropdown-content li:hover,
+#verify-account-page .page--material__content .dropdown-content li.active,
+#verify-account-page .page--material__content .dropdown-content li.selected {
+    background-color: #b388ff;
+}
+#verify-account-page .page--material__content .dropdown-content li.active.selected {
+    background-color: #b388ff;
+}
+#verify-account-page .page--material__content .dropdown-content li:hover > span,
+#verify-account-page .page--material__content .dropdown-content li.active > span,
+#verify-account-page .page--material__content .dropdown-content li.selected > span,
+#verify-account-page .page--material__content .dropdown-content li:hover > a,
+#verify-account-page .page--material__content .dropdown-content li.active > a,
+#verify-account-page .page--material__content .dropdown-content li.selected > a {
+    color: #ffffff;
+}
+#verify-account-page .page--material__content .dropdown-content li.active.selected > span,
+#verify-account-page .page--material__content .dropdown-content li.active.selected > a {
+    color: #ffffff;
+}
+/** STYLE FOR BANK SELECT ELEMENT IN VERIFY ACCOUNT PAGE ENDS **/
+
+
+/** STYLE FOR ONS-LIST ELEMENT IN VERIFY ACCOUNT PAGE BEGINS **/
+#verify-account-page .page--material__content ons-list{
+    min-height: 16em !important;
+}
+/** STYLE FOR ONS-LIST ELEMENT IN VERIFY ACCOUNT PAGE ENDS **/
+
+
+/** STYLE FOR VERIFY ACCOUNT BOTTOM SHEET IN VERIFY ACCOUNT PAGE BEGINS **/
+#verify-account-bottom-sheet.modal.bottom-sheet {
+    max-height: 60%;
+}
+#verify-account-bottom-sheet.modal.bottom-sheet ons-list {
+    background-color: inherit;
+}
+#verify-account-bottom-sheet.modal .modal-content {
+    padding: 0;
+}
+/** STYLE FOR VERIFY ACCOUNT BOTTOM SHEET IN VERIFY ACCOUNT PAGE ENDS **/
+
+
+/** STYLE FOR SIDE MENU PAGE BEGINS **/
+#side-menu-page .page--material__background {
+    background-color: #EDE7F6;
+}
+/** STYLE FOR SIDE MENU PAGE ENDS **/
+
+
+/** STYLE FOR PIN SECURITY CHECK PROMPT DIALOG BEGINS **/
+#pin-security-check input{
+     -webkit-text-security: disc;
+     text-align: center;
+     color: #311b92;
+ }
+/** STYLE FOR PIN SECURITY CHECK PROMPT DIALOG ENDS **/
+
+
+/** STYLE FOR MY CARDS PAGE BEGINS **/
+#my-cards-page .page--material__background {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255,0.6) 0%, rgba(255, 255, 255,0.6) 100%),
+    url('app-images/cards-background.png');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+}
+#my-cards-page ons-list, #my-cards-page ons-list-item {
+    background-color: transparent;
+}
+#my-cards-help-1 {
+    background-color: #82b1ff;
+}
+#my-cards-page-help-popover,
+#my-cards-page-help-popover .popover__content {
+    background-color: #82b1ff;
+}
+#my-cards-page-help-popover .popover__arrow,
+#my-cards-page-help-popover .popover--right__arrow {
+    background-image: linear-gradient(45deg, #82b1ff, #82b1ff 50%, #82b1ff 50%);
+}
+#my-cards-add-card-button {
+    background-color: rgb(179, 136, 255);
+}
+#my-cards-pull-hook-fab ons-icon[spin] {
+    -webkit-animation: ons-icon-spin 0.8s infinite linear;
+    -moz-animation: ons-icon-spin 0.8s infinite linear;
+    animation: ons-icon-spin 0.8s infinite linear;
+}
+/** STYLE FOR MY CARDS PAGE ENDS **/
+
+
+/** STYLE FOR ADD CARD PAGE BEGINS **/
+#add-card-page .page--material__content {
+    position: absolute;
+    top: 0;
+}
+/** STYLE FOR ADD CARD PAGE ENDS **/
+
+
+/** STYLE FOR SELECT ELEMENTS IN ADD CARD PAGE BEGINS **/
+#add-card-page .page--material__content .dropdown-content{
+    max-height: 200px !important;
+    overflow-y: scroll;
+    background-color: rgb(237,231,246);
+}
+#add-card-page .page--material__content .dropdown-content li:hover,
+#add-card-page .page--material__content .dropdown-content li.active,
+#add-card-page .page--material__content .dropdown-content li.selected {
+    background-color: #b388ff;
+}
+#add-card-page .page--material__content .dropdown-content li.active.selected {
+    background-color: #b388ff;
+}
+#add-card-page .page--material__content .dropdown-content li:hover > span,
+#add-card-page .page--material__content .dropdown-content li.active > span,
+#add-card-page .page--material__content .dropdown-content li.selected > span,
+#add-card-page .page--material__content .dropdown-content li:hover > a,
+#add-card-page .page--material__content .dropdown-content li.active > a,
+#add-card-page .page--material__content .dropdown-content li.selected > a {
+    color: #ffffff;
+}
+#add-card-page .page--material__content .dropdown-content li.active.selected > span,
+#add-card-page .page--material__content .dropdown-content li.active.selected > a {
+    color: #ffffff;
+}
+/** STYLE FOR SELECT ELEMENTS IN ADD CARD PAGE ENDS **/
+
+
+/** STYLE FOR ROTATING ANIMATION FOR ELEMENTS BEGINS **/
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.rotating-infinite-ease-in-3 {
+    -webkit-animation: rotating 3s ease-in infinite;
+    -moz-animation: rotating 3s ease-in infinite;
+    -ms-animation: rotating 3s ease-in infinite;
+    -o-animation: rotating 3s ease-in infinite;
+    animation: rotating 3s ease-in infinite;
+}
+/** STYLE FOR ROTATING ANIMATION FOR ELEMENTS ENDS **/
+
+
+/** STYLE FOR MY ACCOUNTS PAGE BEGINS **/
+#my-accounts-page .page--material__background {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255,0.6) 0%, rgba(255, 255, 255,0.6) 100%),
+    url('app-images/accounts-background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+}
+#my-accounts-page ons-list, #my-accounts-page ons-list-item {
+    background-color: transparent;
+}
+
+#my-accounts-page .card.horizontal .card-image { /** control the size of the profile/avatar photos used in the cards **/
+    max-width: 40%;
+}
+#my-accounts-help-1 {
+    background-color: #82b1ff;
+}
+#my-accounts-page-help-popover,
+#my-accounts-page-help-popover .popover__content {
+    background-color: #82b1ff;
+}
+#my-accounts-page-help-popover .popover__arrow,
+#my-accounts-page-help-popover .popover--right__arrow {
+    background-image: linear-gradient(45deg, #82b1ff, #82b1ff 50%, #82b1ff 50%);
+}
+#my-accounts-add-account-button {
+    background-color: rgb(179, 136, 255);
+}
+#my-accounts-pull-hook-fab ons-icon[spin] {
+    -webkit-animation: ons-icon-spin 0.8s infinite linear;
+    -moz-animation: ons-icon-spin 0.8s infinite linear;
+    animation: ons-icon-spin 0.8s infinite linear;
+}
+/** STYLE FOR MY ACCOUNTS PAGE ENDS **/
+
+/** STYLE FOR ADD ACCOUNT PAGE BEGINS **/
+#add-account-page .page--material__content {
+    position: absolute;
+    top: 0;
+}
+/** STYLE FOR ADD ACCOUNT PAGE ENDS **/
+
+/** STYLE FOR BANK SELECT ELEMENT IN ADD ACCOUNT PAGE BEGINS **/
+#add-account-page .page--material__content .dropdown-content{
+    max-height: 200px !important;
+    overflow-y: scroll;
+    background-color: rgb(237,231,246);
+}
+#add-account-page .page--material__content .dropdown-content li:hover,
+#add-account-page .page--material__content .dropdown-content li.active,
+#add-account-page .page--material__content .dropdown-content li.selected {
+    background-color: #b388ff;
+}
+#add-account-page .page--material__content .dropdown-content li.active.selected {
+    background-color: #b388ff;
+}
+#add-account-page .page--material__content .dropdown-content li:hover > span,
+#add-account-page .page--material__content .dropdown-content li.active > span,
+#add-account-page .page--material__content .dropdown-content li.selected > span,
+#add-account-page .page--material__content .dropdown-content li:hover > a,
+#add-account-page .page--material__content .dropdown-content li.active > a,
+#add-account-page .page--material__content .dropdown-content li.selected > a {
+    color: #ffffff;
+}
+#add-account-page .page--material__content .dropdown-content li.active.selected > span,
+#add-account-page .page--material__content .dropdown-content li.active.selected > a {
+    color: #ffffff;
+}
+/** STYLE FOR BANK SELECT ELEMENT IN ADD ACCOUNT PAGE ENDS **/
+
+
+/** STYLE FOR ONS-LIST ELEMENT IN ADD ACCOUNT PAGE BEGINS **/
+#add-account-page .page--material__content ons-list{
+    min-height: 16em !important;
+}
+/** STYLE FOR ONS-LIST ELEMENT IN ADD ACCOUNT PAGE ENDS **/
+
+
+
+/** STYLE FOR SAVED RECIPIENTS PAGE BEGINS **/
+#saved-recipients-page .page--material__background {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255,0.9) 0%, rgba(255, 255, 255,0.9) 100%),
+    url('app-images/recipients-background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+}
+#saved-recipients-page ons-list, #saved-recipients-page ons-list-item {
+    background-color: transparent;
+}
+#saved-recipients-help-1 {
+    background-color: #82b1ff;
+}
+#saved-recipients-page-help-popover,
+#saved-recipients-page-help-popover .popover__content {
+    background-color: #82b1ff;
+}
+#saved-recipients-page-help-popover .popover__arrow,
+#saved-recipients-page-help-popover .popover--right__arrow {
+    background-image: linear-gradient(45deg, #82b1ff, #82b1ff 50%, #82b1ff 50%);
+}
+#saved-recipients-add-recipient-button {
+    background-color: rgb(179, 136, 255);
+}
+#saved-recipients-pull-hook-fab ons-icon[spin] {
+    -webkit-animation: ons-icon-spin 0.8s infinite linear;
+    -moz-animation: ons-icon-spin 0.8s infinite linear;
+    animation: ons-icon-spin 0.8s infinite linear;
+}
+/** STYLE FOR SAVED RECIPIENTS PAGE ENDS **/
+
+
+/** STYLE FOR ADD RECIPIENT PAGE BEGINS **/
+#add-recipient-page .page--material__content {
+    position: absolute;
+    top: 0;
+}
+#add-recipient-page .toolbar--material.translucent-toolbar { /** make the toolbar translucent **/
+    background-color: rgba(49, 27, 146, 0.5);
+}
+/** STYLE FOR ADD RECIPIENT PAGE ENDS **/
+
+/** STYLE FOR BANK SELECT ELEMENT IN ADD RECIPIENT PAGE BEGINS **/
+#add-recipient-page .page--material__content .dropdown-content{
+    max-height: 200px !important;
+    overflow-y: scroll;
+    background-color: rgb(237,231,246);
+}
+#add-recipient-page .page--material__content .dropdown-content li:hover,
+#add-recipient-page .page--material__content .dropdown-content li.active,
+#add-recipient-page .page--material__content .dropdown-content li.selected {
+    background-color: #b388ff;
+}
+#add-recipient-page .page--material__content .dropdown-content li.active.selected {
+    background-color: #b388ff;
+}
+#add-recipient-page .page--material__content .dropdown-content li:hover > span,
+#add-recipient-page .page--material__content .dropdown-content li.active > span,
+#add-recipient-page .page--material__content .dropdown-content li.selected > span,
+#add-recipient-page .page--material__content .dropdown-content li:hover > a,
+#add-recipient-page .page--material__content .dropdown-content li.active > a,
+#add-recipient-page .page--material__content .dropdown-content li.selected > a {
+    color: #ffffff;
+}
+#add-recipient-page .page--material__content .dropdown-content li.active.selected > span,
+#add-recipient-page .page--material__content .dropdown-content li.active.selected > a {
+    color: #ffffff;
+}
+/** STYLE FOR BANK SELECT ELEMENT IN ADD RECIPIENT PAGE ENDS **/
+
+
+/** STYLE FOR ONS-LIST ELEMENT IN ADD RECIPIENT PAGE BEGINS **/
+#add-recipient-page .page--material__content ons-list{
+    min-height: 16em !important;
+}
+/** STYLE FOR ONS-LIST ELEMENT IN ADD RECIPIENT PAGE ENDS **/
+
+
+/** STYLE FOR TRANSFER CASH PAGE BEGINS **/
+.transfer-cash-tabbar .tabbar--material {
+    background-color: #ede7f6 !important;
+}
+.transfer-cash-tabbar .tabbar--material__button {
+    background-color: transparent;
+    color: rgba(179, 136, 255, 1);
+}
+.transfer-cash-tabbar .tabbar--material__button:after {
+    background-color: #B388FF;
+}
+
+.card-pay-icon { /** COLOURED CARD-PAY TAB ICON **/
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-image: url("app-images/card-pay-img.png");
+}
+.bank-pay-icon { /** COLOURED BANK-PAY TAB ICON **/
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-image: url("app-images/bank-pay-img.png");
+}
+/** STYLE FOR TRANSFER CASH PAGE ENDS **/
+
+/** STYLE FOR PAY PROGRESS INDICATOR BEGINS **/
+.postcash-pay-progress{
+    border-top: 3px solid #8a2be2;
+    margin-top: 16px;
+    overflow-y: visible;
+}
+.postcash-pay-progress .postcash-pay-progress-milestone {
+    display: block;
+    height: 1em;
+    width: 1em;
+    padding: 2px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255,0.6) 0%, rgba(255, 255, 255,0.6) 100%),
+    linear-gradient(0deg, rgba(138, 43, 226, 1) 0%,rgba(138, 43, 226, 1) 100%);
+    background-clip: border-box;
+    margin-top: -0.5em;
+}
+.postcash-pay-progress .postcash-pay-progress-milestone-text {
+    display: block;
+    color: rgba(138, 43, 226, 0.6);
+    font-size: 0.6em;
+    text-align: left;
+    margin-top: -1.5em;
+}
+.postcash-pay-progress .postcash-pay-progress-milestone-active {
+    display: block;
+    height: 1em;
+    width: 1em;
+    padding: 2px;
+    border-radius: 50%;
+    border: 1px solid #8a2be2;
+    background-clip: content-box;
+    background-color: #8a2be2;
+    margin-top: -0.5em;
+}
+.postcash-pay-progress .postcash-pay-progress-milestone-text-active {
+    display: block;
+    color: #8a2be2;
+    font-size: 0.6em;
+    text-align: left;
+    margin-top: -1.5em;
+}
+/** STYLE FOR PAY PROGRESS INDICATOR ENDS **/
+
+
+/** STYLE FOR TRANSFER-CASH-CARD HELP POPOVER BEGINS **/
+#transfer-cash-card-page-help-popover,
+#transfer-cash-card-page-help-popover .popover__content {
+    background-color: #b388ff;
+}
+#transfer-cash-card-page-help-popover .popover__arrow,
+#transfer-cash-card-page-help-popover .popover--right__arrow {
+    background-image: linear-gradient(45deg, #b388ff, #b388ff 50%, #b388ff 50%);
+}
+#transfer-cash-card-page-help-popover-2,
+#transfer-cash-card-page-help-popover-2 .popover__content {
+    background-color: #b388ff;
+}
+#transfer-cash-card-page-help-popover-2 .popover__arrow,
+#transfer-cash-card-page-help-popover-2 .popover--right__arrow {
+    background-image: linear-gradient(45deg, #b388ff, #b388ff 50%, #b388ff 50%);
+}
+#transfer-cash-card-page-help-popover-3,
+#transfer-cash-card-page-help-popover-3 .popover__content {
+    background-color: #b388ff;
+}
+#transfer-cash-card-page-help-popover-3 .popover__arrow,
+#transfer-cash-card-page-help-popover-3 .popover--right__arrow {
+    background-image: linear-gradient(45deg, #b388ff, #b388ff 50%, #b388ff 50%);
+}
+/** STYLE FOR TRANSFER-CASH-CARD HELP POPOVER ENDS **/
+
+
+/** STYLE FOR CARD PIN INPUT IN TRANSFER-CASH-CARD PAGE BEGINS **/
+#transfer-cash-card-page #transfer-cash-card-pin{
+    -webkit-text-security: disc;
+}
+/** STYLE FOR CARD PIN INPUT IN TRANSFER-CASH-CARD PAGE ENDS **/
+
+
+/** STYLE FOR BANK SELECT ELEMENT IN TRANSFER-CASH-CARD PAGE BEGINS **/
+#transfer-cash-card-page .page--material__content .dropdown-content{
+    max-height: 200px !important;
+    overflow-y: scroll;
+    background-color: rgb(237,231,246);
+    z-index: 6;
+}
+#transfer-cash-card-page .page--material__content .dropdown-content li:hover,
+#transfer-cash-card-page .page--material__content .dropdown-content li.active,
+#transfer-cash-card-page .page--material__content .dropdown-content li.selected {
+    background-color: #b388ff;
+}
+#transfer-cash-card-page .page--material__content .dropdown-content li.active.selected {
+    background-color: #b388ff;
+}
+#transfer-cash-card-page .page--material__content .dropdown-content li:hover > span,
+#transfer-cash-card-page .page--material__content .dropdown-content li.active > span,
+#transfer-cash-card-page .page--material__content .dropdown-content li.selected > span,
+#transfer-cash-card-page .page--material__content .dropdown-content li:hover > a,
+#transfer-cash-card-page .page--material__content .dropdown-content li.active > a,
+#transfer-cash-card-page .page--material__content .dropdown-content li.selected > a {
+    color: #ffffff;
+}
+#transfer-cash-card-page .page--material__content .dropdown-content li.active.selected > span,
+#transfer-cash-card-page .page--material__content .dropdown-content li.active.selected > a {
+    color: #ffffff;
+}
+/** STYLE FOR BANK SELECT ELEMENT IN TRANSFER-CASH-CARD PAGE ENDS **/
+
+
+/** STYLE FOR THE FINANCIAL OPERATIONS MODAL BEGINS **/
+#financial-operations-success-modal .circle {
+    position: relative;
+    width: 8em;
+    height: 8em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#financial-operations-success-modal .circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#financial-operations-success-modal .circle .mask-top-container,
+#financial-operations-success-modal .circle .mask-bottom-container {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 101%;
+    height: 51%;
+    overflow: hidden;
+}
+#financial-operations-success-modal .circle .mask-bottom-container {
+    top: 50%;
+}
+#financial-operations-success-modal .circle .mask-top,
+#financial-operations-success-modal .circle .mask-bottom {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    -moz-transition: all 2500ms ease-in-out;
+    -o-transition: all 2500ms ease-in-out;
+    -webkit-transition: all 2500ms ease-in-out;
+    transition: all 2500ms ease-in-out;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-backface-visibility: hidden;
+}
+#financial-operations-success-modal .circle .mask-bottom {
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+#financial-operations-success-modal .circle.show .mask-top { /** style is used to trigger the animation to begin **/
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+#financial-operations-success-modal .circle.show .mask-bottom { /** style is used to trigger the animation to begin **/
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+/** STYLE FOR THE FINANCIAL OPERATIONS MODAL ENDS **/
+
+
+/** STYLE FOR THE SECURE PIN LOCK MODAL BEGINS **/
+#security-pin-lock-modal #security-pin-lock-pin {
+    -webkit-text-security: disc;
+    text-align: center;
+    font-size: 2em;
+    border: none;
+}
+#security-pin-lock-modal #security-pin-lock-pin::-webkit-input-placeholder {
+    font-size: 0.85rem;
+}
+/** STYLE FOR THE SECURE PIN LOCK MODAL ENDS **/
+
+
+/** STYLE FOR TRANSFER-CASH-BANK HELP POPOVER BEGINS **/
+#transfer-cash-bank-page-help-popover,
+#transfer-cash-bank-page-help-popover .popover__content {
+    background-color: #b388ff;
+}
+#transfer-cash-bank-page-help-popover .popover__arrow,
+#transfer-cash-bank-page-help-popover .popover--right__arrow {
+    background-image: linear-gradient(45deg, #b388ff, #b388ff 50%, #b388ff 50%);
+}
+#transfer-cash-bank-page-help-popover-2,
+#transfer-cash-bank-page-help-popover-2 .popover__content {
+    background-color: #b388ff;
+}
+#transfer-cash-bank-page-help-popover-2 .popover__arrow,
+#transfer-cash-bank-page-help-popover-2 .popover--right__arrow {
+    background-image: linear-gradient(45deg, #b388ff, #b388ff 50%, #b388ff 50%);
+}
+#transfer-cash-bank-page-help-popover-3,
+#transfer-cash-bank-page-help-popover-3 .popover__content {
+    background-color: #b388ff;
+}
+#transfer-cash-bank-page-help-popover-3 .popover__arrow,
+#transfer-cash-bank-page-help-popover-3 .popover--right__arrow {
+    background-image: linear-gradient(45deg, #b388ff, #b388ff 50%, #b388ff 50%);
+}
+/** STYLE FOR TRANSFER-CASH-BANK HELP POPOVER ENDS **/
+
+
+/** STYLE FOR BANK SELECT ELEMENT IN TRANSFER-CASH-BANK PAGE BEGINS **/
+#transfer-cash-bank-page .page--material__content .dropdown-content{
+    max-height: 200px !important;
+    overflow-y: scroll;
+    background-color: rgb(237,231,246);
+    z-index: 6;
+}
+#transfer-cash-bank-page .page--material__content .dropdown-content li:hover,
+#transfer-cash-bank-page .page--material__content .dropdown-content li.active,
+#transfer-cash-bank-page .page--material__content .dropdown-content li.selected {
+    background-color: #b388ff;
+}
+#transfer-cash-bank-page .page--material__content .dropdown-content li.active.selected {
+    background-color: #b388ff;
+}
+#transfer-cash-bank-page .page--material__content .dropdown-content li:hover > span,
+#transfer-cash-bank-page .page--material__content .dropdown-content li.active > span,
+#transfer-cash-bank-page .page--material__content .dropdown-content li.selected > span,
+#transfer-cash-bank-page .page--material__content .dropdown-content li:hover > a,
+#transfer-cash-bank-page .page--material__content .dropdown-content li.active > a,
+#transfer-cash-bank-page .page--material__content .dropdown-content li.selected > a {
+    color: #ffffff;
+}
+#transfer-cash-bank-page .page--material__content .dropdown-content li.active.selected > span,
+#transfer-cash-bank-page .page--material__content .dropdown-content li.active.selected > a {
+    color: #ffffff;
+}
+/** STYLE FOR BANK SELECT ELEMENT IN TRANSFER-CASH-BANK PAGE ENDS **/
+
+
+/** STYLE FOR TRANSACTION HISTORY PAGE BEGINS **/
+#transaction-history-page .page--material__background {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255,0.7) 0%, rgba(255, 255, 255,0.7) 100%),
+    url('app-images/transaction-history-background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+}
+#transaction-history-page ons-list, #transaction-history-page ons-list-item {
+    background-color: transparent;
+}
+#transaction-history-help-1 {
+    background-color: #82b1ff;
+}
+#transaction-history-page-help-popover,
+#transaction-history-page-help-popover .popover__content {
+    background-color: #82b1ff;
+}
+#transaction-history-page-help-popover .popover__arrow,
+#transaction-history-page-help-popover .popover--right__arrow {
+    background-image: linear-gradient(45deg, #82b1ff, #82b1ff 50%, #82b1ff 50%);
+}
+#transaction-history-pull-hook-fab ons-icon[spin] {
+    -webkit-animation: ons-icon-spin 0.8s infinite linear;
+    -moz-animation: ons-icon-spin 0.8s infinite linear;
+    animation: ons-icon-spin 0.8s infinite linear;
+}
+#transaction-history-page .transaction-history-items-container {
+    border-left: 2px ridge #ababab;
+    overflow-x: visible;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+#transaction-history-page .transaction-history-indicator-container {
+    background-color: transparent;
+    overflow-x: visible;
+    margin: 0;
+    margin-bottom:2em
+}
+#transaction-history-page .transaction-history-item-success-indicator {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    padding: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(0,128,0,0.5);
+    background-clip: padding-box;
+    background-color: rgb(0,128,0);
+    margin-left: -0.55em;
+    margin-top: 0.5em;
+}
+#transaction-history-page .transaction-history-item-time-indicator {
+    display: inline-block;
+    width: calc(100% - 1em);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7em;
+    margin-top: 0;
+    color: #311b92;
+}
+#transaction-history-page .transaction-history-content-container {
+    background-color: transparent;
+    margin: 0;
+    margin-bottom:2em
+}
+#transaction-history-page .transaction-history-content-label {
+    display: block;
+    color: #311b92;
+    font-weight: bold;
+    font-style: italic;
+}
+#transaction-history-page .transaction-history-content-button {
+    font-size: 0.75em;
+    background-color: rgb(179, 136, 255);
+    border-radius: 50%;
+}
+#transaction-history-page .transaction-history-item-incomplete-indicator {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    padding: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,0,0.5);
+    background-clip: padding-box;
+    background-color: rgb(255,255,0);
+    margin-left: -0.55em;
+    margin-top: 0.5em
+}
+/** STYLE FOR TRANSACTION HISTORY PAGE ENDS **/
+
+
+/** STYLE FOR SETTINGS PAGE BEGINS **/
+#settings-page .page--material__content {
+    position: absolute;
+    top: 0;
+}
+#settings-page ons-list {
+    background-color: transparent;
+}
+/** STYLE FOR SETTINGS PAGE ENDS **/
+
+
+/** STYLE FOR CHANGE PIN PAGE BEGINS **/
+#change-pin-page #change-pin-new-pin, #change-pin-page #change-pin-confirm-pin {
+    -webkit-text-security: disc;
+}
+/** STYLE FOR CHANGE PIN PAGE ENDS **/
+
+/** STYLE FOR CONTACT US PAGE BEGINS **/
+#contact-us-page .page--material__content {
+    position: absolute;
+    top: 0;
+}
+/** STYLE FOR CONTACT US PAGE ENDS **/
+
+/** STYLE FOR APP INFO PAGE BEGINS **/
+#app-info-page .page--material__content {
+    position: absolute;
+    top: 0;
+}
+/** STYLE FOR APP INFO PAGE ENDS **/
