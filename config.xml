@@ -61,6 +61,7 @@
     <preference name="CodePushDeploymentKey" value="ZeqkiiuB3zdRnK1QBK3v6JQe_EkYf84a5d3a-cd65-48fa-8186-1d4c553b8f18" />
 </platform>
 
+<!--
 <icon platform="android" src="package-assets/ldpi_icon.png" width="36" height="36" qualifier="ldpi"/>
 <icon platform="android" src="package-assets/mdpi_icon.png" width="48" height="48" qualifier="mdpi"/>
 <icon platform="android" src="package-assets/hdpi_icon.png" width="72" height="72" qualifier="hdpi"/>
@@ -74,6 +75,7 @@
 <splash platform="android" src="package-assets/mdpi_landscape.png" width="470" height="320" orientation="landscape" qualifier="land-mdpi"/>
 <splash platform="android" src="package-assets/hdpi_landscape.png" width="640" height="480" orientation="landscape" qualifier="land-hdpi"/>
 <splash platform="android" src="package-assets/xhdpi_landscape.png" width="960" height="720" orientation="landscape" qualifier="land-xhdpi"/>
+-->
 
 <config-file platform="android" parent="/manifest/application" mode="merge"> 
     <activity android:launchMode="singleTop" />
