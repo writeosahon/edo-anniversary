@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/app-custom-styles.css">
 
     <meta charset="UTF-8">
-    <title>PostCash</title>
+    <title>Edo Anniversary</title>
 
     <!-- Content-Security-Policy tag -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' wss: ws: data: http: https: blob: postcash: gap 'unsafe-inline' 'unsafe-eval'">
@@ -47,9 +47,9 @@
     <script src="cordova.js"></script>
 
     <!-- app script -->
-    <script src="js/compiled-js/base-compiled.min.js"></script>
-    <script src="js/compiled-js/controller-compiled.min.js"></script>
-    <script src="js/compiled-js/model-compiled.min.js"></script>
+    <script src="js/compiled-js/base-compiled.js"></script>
+    <script src="js/compiled-js/controller-compiled.js"></script>
+    <script src="js/compiled-js/model-compiled.js"></script>
 
     <!-- special script for triggering the intel xdk special device ready event i.e. "app.Ready" -->
     <script src="xdk/init-dev.js"></script>
@@ -216,11 +216,12 @@
     <ons-navigator id="app-main-navigator" page="main-menu-page.html"></ons-navigator>
 </ons-template>
 
-<ons-modal id="phone-verification-modal" direction="up">
+<!-- loader modal -->
+<ons-modal id="loader-modal" direction="up">
     <div style="text-align: center">
         <ons-progress-circular indeterminate></ons-progress-circular>
     </div>
-    <div class="modal-message" style="text-align: center"></div>
+    <div class="loader-modal-message" style="text-align: center"></div>
 </ons-modal>
 
 

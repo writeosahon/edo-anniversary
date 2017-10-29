@@ -15,10 +15,18 @@
     </ons-toolbar>
 
     <ons-carousel fullscreen direction="horizontal" item-width="100%">
-        <ons-carousel-item>
-            <div class="row valign-wrapper">
-                <div class="col s6 m4">
-                    <div style="width: 3em; height: 3em; background-color: black"></div>
+        <ons-carousel-item class="valign-wrapper" style="min-width: 100%; width: 100% !important; max-width: 100%;">
+            <div class="row"
+                 style="min-width: 100%; width: 100% !important;
+                 max-width: 100%; padding-top: 0.5em">
+                <div class="col s6 m4" style="text-align: center">
+                    <div class="z-depth-2 rotating-infinite-ease-in-1" style="width: 6em; height: 6em;
+                    display: inline-block; border-radius: 50%;
+                    background-image: linear-gradient(20deg, rgba(49,150,200,0.8) 0%, rgba(248,195,0,0.8) 100%),
+                    linear-gradient(0deg, #F8C300 0%, #F8C300 100%)"></div>
+                </div>
+                <div class="col s6 m4" style="text-align: center">
+                    <div style="width: 6em; height: 6em; display: inline-block; background-color: blue"></div>
                 </div>
             </div>
 

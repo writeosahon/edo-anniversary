@@ -29,4 +29,10 @@ utopiasoftware.edoae.model = {
 // register the event listener for when all Hybrid plugins and document DOM are ready
 document.addEventListener("app.Ready", utopiasoftware.edoae.controller.appReady, false);
 
+// listen for the initialisation of the Main-Menu page
+$(document).on("init", "#main-menu-page", utopiasoftware.edoae.controller.mainMenuPageViewModel.pageInit);
+
+// listen for when the Main-Menu page is shown
+$(document).on("show", "#main-menu-page", utopiasoftware.edoae.controller.mainMenuPageViewModel.pageShow);
+
 //# sourceMappingURL=model-compiled.js.map
