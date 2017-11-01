@@ -1,0 +1,191 @@
+/** CUSTOM FONT ICONS FOR APP **/
+@font-face {
+  font-family: 'edoae-font-icons';
+  src: url('../fonts/edoae.woff') format('woff'), url('../fonts/edoae.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.edoae-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 'edoae-font-icons';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.edoae-icon-hc-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.edoae-icon-hc-2x {
+  font-size: 2em;
+}
+.edoae-icon-hc-3x {
+  font-size: 3em;
+}
+.edoae-icon-hc-4x {
+  font-size: 4em;
+}
+.edoae-icon-hc-5x {
+  font-size: 5em;
+}
+.edoae-icon-hc-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.edoae-icon-hc-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+.edoae-icon-hc-ul > li {
+  position: relative;
+}
+.edoae-icon-hc-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+.edoae-icon-hc-li.edoae-icon-hc-lg {
+  left: -1.85714286em;
+}
+.edoae-icon-hc-border {
+  padding: .1em .25em;
+  border: solid 0.1em #9e9e9e;
+  border-radius: 2px;
+}
+.edoae-icon-hc-border-circle {
+  padding: .1em .25em;
+  border: solid 0.1em #9e9e9e;
+  border-radius: 50%;
+}
+.edoae-icon.pull-left {
+  float: left;
+  margin-right: .15em;
+}
+.edoae-icon.pull-right {
+  float: right;
+  margin-left: .15em;
+}
+.edoae-icon-hc-spin {
+  -webkit-animation: edoae-spin 1.5s infinite linear;
+  animation: edoae-spin 1.5s infinite linear;
+}
+.edoae-icon-hc-spin-reverse {
+  -webkit-animation: edoae-spin-reverse 1.5s infinite linear;
+  animation: edoae-spin-reverse 1.5s infinite linear;
+}
+@-webkit-keyframes edoae-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes edoae-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes edoae-spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+    transform: rotate(-359deg);
+  }
+}
+@keyframes edoae-spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-359deg);
+    transform: rotate(-359deg);
+  }
+}
+.edoae-icon-hc-rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.edoae-icon-hc-rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.edoae-icon-hc-rotate-270 {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.edoae-icon-hc-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.edoae-icon-hc-flip-vertical {
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+.edoae-icon-hc-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.edoae-icon-hc-stack-1x,
+.edoae-icon-hc-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.edoae-icon-hc-stack-1x {
+  line-height: inherit;
+}
+.edoae-icon-hc-stack-2x {
+  font-size: 2em;
+}
+.edoae-icon-hc-inverse {
+  color: #ffffff;
+}
+
+/** DEFINE FONT ICONS **/
+.zmdi-edoae-icon-calendar-multiple:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 'edoae-font-icons';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: '\e900';
+}
+.zmdi-edoae-icon-information-variant:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 'edoae-font-icons';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: '\e901';
+}

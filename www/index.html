@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
     <!-- app custom font icons -->
-    <link rel="stylesheet" href="css/saveup-font-icons/css/saveup-font-style.css">
+    <link rel="stylesheet" href="css/edoae-font-icons/css/edoae-font-style.css">
 
     <!--- style library used for materialize-css -->
     <link rel="stylesheet" href="css/materialize.css">
@@ -221,8 +221,26 @@
     <div style="text-align: center">
         <ons-progress-circular indeterminate></ons-progress-circular>
     </div>
-    <div class="loader-modal-message" style="text-align: center"></div>
+    <div id="loader-modal-message" style="text-align: center"></div>
 </ons-modal>
+
+<!-- events-schedule-details fixed-footer modal. This is not directly visible on the page  -->
+<div id="events-schedule-details-fixed-modal" class="modal modal-fixed-footer">
+    <div class="modal-content" style="white-space: normal !important;">
+        <h5 id="events-schedule-details-heading" style="font-size: 1em; font-weight: bold; text-align: center">
+        </h5>
+        <p id="events-schedule-details-content">
+        </p>
+
+    </div>
+
+    <div class="modal-footer">
+        <ons-button style="background-color: #1b5e20; color: #eeff41; border-radius: 1em; float: right"
+                    onclick="$('#events-schedule-details-fixed-modal .modal-content').scrollTop(0); $('#events-schedule-details-fixed-modal').modal('close');">
+            Close
+        </ons-button>
+    </div>
+</div>
 
 
 </body>

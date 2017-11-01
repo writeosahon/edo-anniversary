@@ -1,0 +1,43 @@
+[
+    {
+        "hotel_name": "Protea Hotel by Marriott, Select Emotan",
+        "hotel_address": "4 Central Road, Off Sapele Road, Oka, Benin City",
+        "hotel_gps": [6.322581, 5.625674]
+    },
+
+    {
+        "hotel_name": "Randekhi Royal Hotel",
+        "hotel_address": "6 Uhenuyi St, Off Ihama Road, Oka, Benin City, Edo State",
+        "hotel_gps": [6.3118231, 5.6119615]
+    },
+
+    {
+        "hotel_name": "Prestige Hotel and Suites",
+        "hotel_address": "1 Ihama Road, Off Airport Road, Oka, Benin City",
+        "hotel_gps": [6.3137799, 5.6086524]
+    },
+
+    {
+        "hotel_name": "The Sage Hotel",
+        "hotel_address": "72a Boundary Road, Off Airport Road, Oka, Benin City",
+        "hotel_gps": [6.3187971, 5.6072227]
+    },
+
+    {
+        "hotel_name": "Westview Hotel",
+        "hotel_address": "65 Boundary Road, Oka, Benin City",
+        "hotel_gps": [6.3102469, 5.6189402]
+    },
+
+    {
+        "hotel_name": "Eterno Hotels",
+        "hotel_address": "103B, Aiguobasimwin Crescent, off Ikpopan Road, GRA, Oka, Benin City",
+        "hotel_gps": [6.3142613, 5.6155053]
+    },
+
+    {
+        "hotel_name": "Golden Tulip Essential Hotel",
+        "hotel_address": "23-27 Etete Road, Oka, Benin City",
+        "hotel_gps": [6.2971854, 5.6234473]
+    }
+]

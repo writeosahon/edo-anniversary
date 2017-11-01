@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"  xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0"  xmlns:android="http://schemas.android.com/apk/res/android" android-versionCode="1" version="1.0.0" id = "utopiasoftware.edostate.anniversary"  >
 
 <name>Edo Anniversary</name>
-<description>Edo Anniversary Event</description>
+<description>Alaghodaro 2017</description>
 <author>Utopia Software</author>
 <content src="index.html"/>
 
@@ -32,11 +32,15 @@
 <plugin name="cordova-plugin-inappbrowser" spec="1.4.0"/>
 
 <plugin name="onesignal-cordova-plugin" spec="2.2.0"/>
+<plugin name="cordova-plugin-geolocation" spec="2.4.3"/>
+<plugin name="com.lampa.startapp" spec="0.1.4"/>
+<plugin name="cordova-plugin-insomnia" spec="4.3.0"/>
 
 <plugin name="cordova-plugin-whitelist" spec="1.2.2"/>
 
 <preference  name="AutoHideSplashScreen" value="true"/>
 <preference  name="SplashShowOnlyFirstTime" value="false"/>
+<preference name="FadeSplashScreen" value="false"/>
 <preference  name="SplashScreenDelay" value="30000"/>
 
 <platform  name="android">

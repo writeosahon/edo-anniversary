@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<!-- hotels page -->
+<ons-page id="hotels-page">
+    <ons-toolbar style="background-color: #1b5e20 !important;">
+        <div class="left">
+            <ons-toolbar-button onclick="$('#side-menu').get(0).toggle()" style="color: #eeff41">
+                <ons-icon icon="md-menu" size="16px"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center" style="text-align: left; color: #eeff41">
+            Hotels
+        </div>
+    </ons-toolbar>
+
+    <div class="progress" style="position: fixed; top: 57px;">
+        <div class="indeterminate"></div>
+    </div>
+
+    <ons-list id="hotels-page-list" style="display: block">
+        <ons-list-item modifier="longdivider">
+            <div class="left">
+                <ons-icon icon="md-city-alt" class="list-item__icon" size="42px" fixed-width="true"
+                          style="background-color: #1b5e20; color: #eeff41"></ons-icon>
+            </div>
+            <div class="center" style="margin-left: 1em;">
+                <span class="list-item__title" style="color: #000000; text-align: left; text-transform: capitalize">
+                    Protea Hotel by Marriott, Select Emotan
+                </span>
+                <div class="list-item__title">
+                    <span style="font-weight: bold">Address: </span>
+                    <span style="font-style: italic">
+                        4 Central Road, Off Sapele Road, Oka, Benin City
+                    </span>
+                </div>
+                <div style="float: right;">
+                    <ons-button style="background-color: #1b5e20; color: #eeff41; font-size: 0.75em; margin-top: 0.5em;"
+                            onclick="">
+                        Location
+                    </ons-button>
+                </div>
+            </div>
+        </ons-list-item>
+    </ons-list>
+
+</ons-page>
+</body>
+</html>

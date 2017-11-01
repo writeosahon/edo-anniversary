@@ -3122,7 +3122,7 @@ td, th {
   height: 4px;
   display: block;
   width: 100%;
-  background-color: #b388ff;
+  background-color: #00e676;
   border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden;
@@ -3133,12 +3133,12 @@ td, th {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #311b92;
+  background-color: #1b5e20;
   transition: width .3s linear;
 }
 
 .progress .indeterminate {
-  background-color: #311b92;
+  background-color: #1b5e20;
 }
 
 .progress .indeterminate:before {

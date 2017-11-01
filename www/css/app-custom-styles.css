@@ -15,9 +15,108 @@
     }
 }
 .rotating-infinite-ease-in-1 {
-    -webkit-animation: rotating 1s ease-in infinite alternate;
-    -moz-animation: rotating 1s ease-in infinite alternate;
-    -ms-animation: rotating 1s ease-in infinite alternate;
-    -o-animation: rotating 1s ease-in infinite alternate;
-    animation: rotating 1s ease-in infinite alternate;
+    -webkit-animation: rotating 1s ease-in infinite normal running;
+    -moz-animation: rotating 1s ease-in infinite running;
+    -ms-animation: rotating 1s ease-in infinite running;
+    -o-animation: rotating 1s ease-in infinite normal running;
+    animation: rotating 1s ease-in infinite normal running;
+}
+.rotating-infinite-ease-in-1-paused {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+
+/** STYLE FOR MAIN MENU PAGE BEGINS **/
+#main-menu-page .page--material__background {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255,0.7) 0%, rgba(255, 255, 255,0.7) 100%),
+    url('app-images/ringroad_background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+}
+/** STYLE FOR MAIN MENU PAGE ENDS **/
+
+
+/** STYLE FOR EVENTS SCHEDULE PAGE BEGINS **/
+#events-schedule-page .page--material__background {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255,0.8) 0%, rgba(255, 255, 255,0.8) 100%),
+    url('app-images/events-schedule-background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+}
+#events-schedule-page ons-list, #events-schedule-page ons-list-item {
+    background-color: transparent;
+}
+#events-schedule-page .events-schedule-items-container {
+    border-left: 2px ridge #ababab;
+    overflow-x: visible;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+#events-schedule-page .events-schedule-indicator-container {
+    background-color: transparent;
+    overflow-x: visible;
+    margin: 0;
+    margin-bottom:2em
+}
+#events-schedule-page .events-schedule-item-success-indicator {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    padding: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(0,128,0,0.5);
+    background-clip: padding-box;
+    background-color: #00e676;
+    margin-left: -0.55em;
+    margin-top: 0.5em;
+}
+#events-schedule-page .events-schedule-item-day-indicator {
+    display: inline-block;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-size: 1em;
+    margin-top: 0;
+    color: #1b5e20;
+}
+#events-schedule-page .events-schedule-item-time-indicator {
+    display: inline-block;
+    width: calc(100% - 1em);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7em;
+    margin-top: 0;
+    color: darkgoldenrod;
+}
+#events-schedule-page .events-schedule-content-container {
+    background-color: transparent;
+    margin: 0;
+    margin-bottom:2em
+}
+#events-schedule-page .events-schedule-content-label {
+    display: block;
+    color: darkgoldenrod;
+    font-weight: bold;
+    font-style: italic;
+}
+#events-schedule-page .events-schedule-content-button {
+    font-size: 0.75em;
+    background-color: #1b5e20;
+    color: #eeff41;
+    border-radius: 50%;
+}
+#events-schedule-page .events-schedule-item-incomplete-indicator {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    padding: 0;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,0,0.5);
+    background-clip: padding-box;
+    background-color: rgb(255,255,0);
+    margin-left: -0.55em;
+    margin-top: 0.5em
 }

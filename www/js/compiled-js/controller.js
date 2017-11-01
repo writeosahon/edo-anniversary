@@ -37,6 +37,18 @@ utopiasoftware.edoae.controller = {
             // set the content page for the app
             $('ons-splitter').get(0).content.load("app-main-template");
 
+            // initialise events-schedule-details-fixed-modal plugin
+            $('#events-schedule-details-fixed-modal').modal({
+                ready: function(){ // callback for when fixed-modal is opened
+                    // flag a state that indicates the modal is currently open
+                    $('#events-schedule-details-fixed-modal').data("fixedModalState", "open");
+                },
+                complete: function(){ // callback for when fixed-modal is closed
+                    // flag a state that indicates the fixed-modal is currently closed
+                    $('#events-schedule-details-fixed-modal').data("fixedModalState", "closed");
+                }
+            });
+
         });
 
         // add listener for when the Internet network connection is offline
@@ -57,6 +69,18 @@ utopiasoftware.edoae.controller = {
 
         }, false);
 
+        // add a listener for when the user pauses the device i.e when the app is taken from the foreground to background
+        document.addEventListener("pause", function(){
+            $('.rotating-infinite-ease-in-1').addClass('rotating-infinite-ease-in-1-paused');
+        }, false);
+
+        // add a listener for when the user resumes the device i.e when the app is taken from the background to foreground
+        document.addEventListener("resume", function(){
+            $('.rotating-infinite-ease-in-1').removeClass('rotating-infinite-ease-in-1-paused');
+        }, false);
+
+
+
 
         try {
             // lock the orientation of the device to 'PORTRAIT'
@@ -65,7 +89,7 @@ utopiasoftware.edoae.controller = {
         catch(err){}
 
         // set status bar color
-        StatusBar.backgroundColorByHexString("#000000");
+        StatusBar.backgroundColorByHexString("#2e7d32");
 
         // prepare the inapp browser plugin
         window.open = cordova.InAppBrowser.open;
@@ -136,7 +160,7 @@ utopiasoftware.edoae.controller = {
                     });
                 }).
                 then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
+                    if(userInput === utopiasoftware.edoae.model.appUserDetails.securePin){ // authentication successful
                         $('#transfer-cash-page').remove(); // remove previous transfer cash pages
                         $('#app-main-navigator').get(0).pushPage("transfer-cash-page.html", {}); // navigate to the specified page
                     }
@@ -179,7 +203,7 @@ utopiasoftware.edoae.controller = {
                     });
                 }).
                 then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
+                    if(userInput === utopiasoftware.edoae.model.appUserDetails.securePin){ // authentication successful
                         $('#app-main-navigator').get(0).bringPageTop("my-cards-page.html", {}); // navigate to the specified page
                     }
                     else{ // inform user that security check failed/user authentication failed
@@ -210,7 +234,7 @@ utopiasoftware.edoae.controller = {
                     });
                 }).
                 then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
+                    if(userInput === utopiasoftware.edoae.model.appUserDetails.securePin){ // authentication successful
                         $('#app-main-navigator').get(0).bringPageTop("my-accounts-page.html", {}); // navigate to the specified page
                     }
                     else{ // inform user that security check failed/user authentication failed
@@ -241,7 +265,7 @@ utopiasoftware.edoae.controller = {
                     });
                 }).
                 then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
+                    if(userInput === utopiasoftware.edoae.model.appUserDetails.securePin){ // authentication successful
                         $('#app-main-navigator').get(0).bringPageTop("saved-recipients-page.html", {}); // navigate to the specified page
                     }
                     else{ // inform user that security check failed/user authentication failed
@@ -283,7 +307,7 @@ utopiasoftware.edoae.controller = {
                     });
                 }).
                 then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
+                    if(userInput === utopiasoftware.edoae.model.appUserDetails.securePin){ // authentication successful
                         $('#app-main-navigator').get(0).bringPageTop("transaction-history-page.html", {}); // navigate to the specified page
                     }
                     else{ // inform user that security check failed/user authentication failed
@@ -360,7 +384,7 @@ utopiasoftware.edoae.controller = {
             //function is used to initialise the page if the app is fully ready for execution
             function loadPageOnAppReady(){
                 // check to see if onsen is ready and if all app loading has been completed
-                if(!ons.isReady() || utopiasoftware.saveup.model.isAppReady === false){
+                if(!ons.isReady() || utopiasoftware.edoae.model.isAppReady === false){
                     setTimeout(loadPageOnAppReady, 500); // call this function again after half a second
                     return;
                 }
@@ -389,6 +413,17 @@ utopiasoftware.edoae.controller = {
         pageShow: function(){
             // disable the swipeable feature for the app splitter
             $('ons-splitter-side').removeAttr("swipeable");
+            // commence the rotating animation on main menu page
+            $('.rotating-infinite-ease-in-1').removeClass('rotating-infinite-ease-in-1-paused');
+        },
+
+
+        /**
+         * method is triggered when page is hidden
+         */
+        pageHide: function(){
+            // stop the rotating animation on main menu page
+            $('.rotating-infinite-ease-in-1').addClass('rotating-infinite-ease-in-1-paused');
         },
 
 
@@ -398,178 +433,320 @@ utopiasoftware.edoae.controller = {
          * @param label
          */
         mainMenuButtonsClicked: function(label){
-            if(label == "transfer cash"){ // 'transfer cash' button was clicked
 
-                // ask user for secure PIN before proceeding. secure pin MUST match
-                ons.notification.prompt({title: "Security Check", id: "pin-security-check", class: "utopiasoftware-no-style",
-                    messageHTML: '<div><ons-icon icon="ion-lock-combination" size="24px" ' +
-                    'style="color: #b388ff; float: left; width: 26px;"></ons-icon> <span style="float: right; width: calc(100% - 26px);">' +
-                    'Please enter your PostCash Secure PIN to proceed</span></div>',
-                    cancelable: true, placeholder: "Secure PIN", inputType: "number", defaultValue: "", autofocus: true,
-                    submitOnEnter: true
-                }).
-                then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
-                        $('#app-main-navigator').get(0).pushPage("transfer-cash-page.html", {}); // navigate to the specified pages
-                    }
-                    else{ // inform user that security check failed/user authentication failed
-                        ons.notification.alert({title: "Security Check",
-                            messageHTML: '<ons-icon icon="md-close-circle-o" size="30px" ' +
-                            'style="color: red;"></ons-icon> <span>' + 'Security check failed. Invalid credentials' + '</span>',
-                            cancelable: true
-                        });
-                    }
-                }).
-                catch(function(){});
+            if(label == "events schedule"){ // 'events schedule' button was clicked
+
+                $('#app-main-navigator').get(0).pushPage("events-schedule-page.html", {}); // navigate to the events schedule page
 
                 return;
             }
 
-            if(label == "verify account"){ // 'verify account' button was clicked
 
-                $('#app-main-navigator').get(0).pushPage("verify-account-page.html", {}); // navigate to the verify account page
+            if(label == "hotels"){ // intro button was clicked
 
-                return;
-            }
-
-            if(label == "my cards"){ // 'my cards' button was clicked
-
-                // ask user for secure PIN before proceeding. secure pin MUST match
-                ons.notification.prompt({title: "Security Check", id: "pin-security-check", class: "utopiasoftware-no-style",
-                    messageHTML: '<div><ons-icon icon="ion-lock-combination" size="24px" ' +
-                    'style="color: #b388ff; float: left; width: 26px;"></ons-icon> <span style="float: right; width: calc(100% - 26px);">' +
-                    'Please enter your PostCash Secure PIN to proceed</span></div>',
-                    cancelable: true, placeholder: "Secure PIN", inputType: "number", defaultValue: "", autofocus: true,
-                    submitOnEnter: true
-                }).
-                then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
-                        $('#app-main-navigator').get(0).pushPage("my-cards-page.html", {}); // navigate to the my cards pages
-                    }
-                    else{ // inform user that security check failed/user authentication failed
-                        ons.notification.alert({title: "Security Check",
-                            messageHTML: '<ons-icon icon="md-close-circle-o" size="30px" ' +
-                            'style="color: red;"></ons-icon> <span>' + 'Security check failed. Invalid credentials' + '</span>',
-                            cancelable: true
-                        });
-                    }
-                }).
-                catch(function(){});
+                //$('#app-main-navigator').get(0).pushPage("hotels-page.html", {}); // navigate to the page
 
                 return;
             }
 
-            if(label == "my accounts"){ // 'my accounts' button was clicked
 
-                // ask user for secure PIN before proceeding. secure pin MUST match
-                ons.notification.prompt({title: "Security Check", id: "pin-security-check", class: "utopiasoftware-no-style",
-                    messageHTML: '<div><ons-icon icon="ion-lock-combination" size="24px" ' +
-                    'style="color: #b388ff; float: left; width: 26px;"></ons-icon> <span style="float: right; width: calc(100% - 26px);">' +
-                    'Please enter your PostCash Secure PIN to proceed</span></div>',
-                    cancelable: true, placeholder: "Secure PIN", inputType: "number", defaultValue: "", autofocus: true,
-                    submitOnEnter: true
-                }).
-                then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
-                        $('#app-main-navigator').get(0).pushPage("my-accounts-page.html", {}); // navigate to the my accounts pages
-                    }
-                    else{ // inform user that security check failed/user authentication failed
-                        ons.notification.alert({title: "Security Check",
-                            messageHTML: '<ons-icon icon="md-close-circle-o" size="30px" ' +
-                            'style="color: red;"></ons-icon> <span>' + 'Security check failed. Invalid credentials' + '</span>',
-                            cancelable: true
-                        });
-                    }
-                }).
-                catch(function(){});
-
-                return;
-            }
-
-            if(label == "saved recipients"){ // 'saved recipients' button was clicked
-
-                // ask user for secure PIN before proceeding. secure pin MUST match
-                ons.notification.prompt({title: "Security Check", id: "pin-security-check", class: "utopiasoftware-no-style",
-                    messageHTML: '<div><ons-icon icon="ion-lock-combination" size="24px" ' +
-                    'style="color: #b388ff; float: left; width: 26px;"></ons-icon> <span style="float: right; width: calc(100% - 26px);">' +
-                    'Please enter your PostCash Secure PIN to proceed</span></div>',
-                    cancelable: true, placeholder: "Secure PIN", inputType: "number", defaultValue: "", autofocus: true,
-                    submitOnEnter: true
-                }).
-                then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
-                        $('#app-main-navigator').get(0).pushPage("saved-recipients-page.html", {}); // navigate to the saved recipients pages
-                    }
-                    else{ // inform user that security check failed/user authentication failed
-                        ons.notification.alert({title: "Security Check",
-                            messageHTML: '<ons-icon icon="md-close-circle-o" size="30px" ' +
-                            'style="color: red;"></ons-icon> <span>' + 'Security check failed. Invalid credentials' + '</span>',
-                            cancelable: true
-                        });
-                    }
-                }).
-                catch(function(){});
-
-                return;
-            }
-
-            if(label == "intro"){ // intro button was clicked
-
-                $('#app-main-navigator').get(0).pushPage("onboarding-page.html", {}); // navigate ot the onboarding page
-
-                return;
-            }
-
-            if(label == "transaction history"){ // 'transaction history' button was clicked
-
-                // ask user for secure PIN before proceeding. secure pin MUST match
-                ons.notification.prompt({title: "Security Check", id: "pin-security-check", class: "utopiasoftware-no-style",
-                    messageHTML: '<div><ons-icon icon="ion-lock-combination" size="24px" ' +
-                    'style="color: #b388ff; float: left; width: 26px;"></ons-icon> <span style="float: right; width: calc(100% - 26px);">' +
-                    'Please enter your PostCash Secure PIN to proceed</span></div>',
-                    cancelable: true, placeholder: "Secure PIN", inputType: "number", defaultValue: "", autofocus: true,
-                    submitOnEnter: true
-                }).
-                then(function(userInput){ // user has provided a secured PIN , now authenticate it
-                    if(userInput === utopiasoftware.saveup.model.appUserDetails.securePin){ // authentication successful
-                        $('#app-main-navigator').get(0).pushPage("transaction-history-page.html", {}); // navigate to the transaction history pages
-                    }
-                    else{ // inform user that security check failed/user authentication failed
-                        ons.notification.alert({title: "Security Check",
-                            messageHTML: '<ons-icon icon="md-close-circle-o" size="30px" ' +
-                            'style="color: red;"></ons-icon> <span>' + 'Security check failed. Invalid credentials' + '</span>',
-                            cancelable: true
-                        });
-                    }
-                }).
-                catch(function(){});
-
-                return;
-            }
-
-            if(label == "settings"){ // settings button was clicked
-
-                $('#app-main-navigator').get(0).pushPage("settings-page.html", {}); // settings page
-
-                return;
-            }
-
-            if(label == "contact us"){ // contact us button was clicked
-
-                $('#app-main-navigator').get(0).pushPage("contact-us-page.html", {}); // navigate to contact us page
-
-                return;
-            }
-
-            if(label == "app info"){ // app info button was clicked
-
-                $('#app-main-navigator').get(0).pushPage("app-info-page.html", {}); // navigate to contact us page
-
-                return;
-            }
         }
 
 
+
+    },
+
+    /**
+     * object is the view-model for events schedule page
+     */
+    eventsSchedulePageViewModel: {
+
+
+        /**
+         * event is triggered when page is initialised
+         */
+        pageInit: function(event){
+
+            var $thisPage = $(event.target); // get the current page shown
+            // enable the swipeable feature for the app splitter
+            $('ons-splitter-side').attr("swipeable", true);
+
+            // call the function used to initialise the app page if the app is fully loaded
+            loadPageOnAppReady();
+
+            //function is used to initialise the page if the app is fully ready for execution
+            function loadPageOnAppReady(){
+                // check to see if onsen is ready and if all app loading has been completed
+                if(!ons.isReady() || utopiasoftware.edoae.model.isAppReady === false){
+                    setTimeout(loadPageOnAppReady, 500); // call this function again after half a second
+                    return;
+                }
+
+                // listen for the back button event
+                $('#app-main-navigator').get(0).topPage.onDeviceBackButton = function(){
+
+                    // check if the side menu is open
+                    if($('ons-splitter').get(0).left.isOpen){ // side menu open, so close it
+                        $('ons-splitter').get(0).left.close();
+                        return; // exit the method
+                    }
+
+                    // check if events-schedule-details-fixed-modal is open
+                    if($('#events-schedule-details-fixed-modal').data("fixedModalState") == "open"){
+                        // scroll to the top of the modal, then close it
+                        $('#events-schedule-details-fixed-modal .modal-content').scrollTop(0);
+                        $('#events-schedule-details-fixed-modal').modal('close');
+                        return;
+                    }
+
+                    $('#app-main-navigator').get(0).resetToPage("main-menu-page.html");
+                };
+
+
+                // load the user's transaction history data from the device secure store
+                utopiasoftware.edoae.controller.eventsSchedulePageViewModel.loadEventsData().
+                then(function(eventsObject){ // events object has been returned
+                    // empty the contents of the events list
+                    $('#events-schedule-list .events-schedule-items-container', $thisPage).html("");
+                    // create the events schedule content
+                    let eventsScheduleContent = `` ;
+
+                    for(let index = 0; index < eventsObject.event_items.length; index++){ // loop through event items
+
+                        let eventItem = eventsObject.event_items[index];
+
+                        eventsScheduleContent += `<ons-col width="100%" class="events-schedule-item-day-indicator"
+                        style="text-align:center; margin-bottom: 0.8em">
+                        ${eventItem.day}
+                        </ons-col>`;
+
+                        for(let index2 = 0; index2 < eventItem.events.length; index2++){ //loop through events in each event item
+                            eventsScheduleContent += `<ons-col width="27%" class="events-schedule-indicator-container">
+                            <span class="events-schedule-item-success-indicator"></span>
+                            <span class="events-schedule-item-time-indicator">${eventItem.events[index2].event_time}</span>
+                            </ons-col>
+                            <ons-col width="68%" class="events-schedule-content-container" style="padding-left: 0.5em">
+                            <div style="font-size: 0.8em; width: 100%">
+                            <span class="events-schedule-content-label">
+                            Title
+                            </span>
+                            <span>
+                            ${eventItem.events[index2].event_description}
+                            </span>
+                            </div>`;
+                            // check if the event has any moderators
+                            if(eventItem.events[index2].moderators.length > 0){ // there are moderators
+                                eventsScheduleContent += `<div style="font-size: 0.8em; width: 100%">
+                                    <span class="events-schedule-content-label">
+                                    Moderators
+                                    </span>
+                                    <span style="text-transform: capitalize">
+                                    ${eventItem.events[index2].moderators.join(", ")}
+                                    </span>
+                                </div>`;
+                            }
+
+                            // check if the event has any panelists
+                            if(eventItem.events[index2].panelists.length > 0){ // there are panelists
+                                eventsScheduleContent += `<div style="font-size: 0.8em; width: 100%">
+                                    <span class="events-schedule-content-label">
+                                    Panelists
+                                    </span>
+                                    <span style="text-transform: capitalize">
+                                    ${eventItem.events[index2].panelists.join(", ")}
+                                    </span>
+                                </div>`;
+                            }
+
+                            // check if the event has any special guests
+                            if(eventItem.events[index2].special_guests &&
+                                Array.isArray(eventItem.events[index2].special_guests)){ // there are special guests
+                                eventsScheduleContent += `<div style="font-size: 0.8em; width: 100%">
+                                    <span class="events-schedule-content-label">
+                                    Special Guests
+                                    </span>
+                                    <span style="text-transform: capitalize">
+                                    ${eventItem.events[index2].special_guests.join(", ")}
+                                    </span>
+                                </div>`;
+                            }
+
+                            // check if the event has a venue
+                            if(eventItem.events[index2].venue){ // there is a venue
+                                eventsScheduleContent += `<div style="font-size: 0.8em; width: 100%">
+                                    <span class="events-schedule-content-label">
+                                    Venue
+                                    </span>
+                                    <span style="text-transform: capitalize">
+                                    ${eventItem.events[index2].venue}
+                                    </span>
+                                </div>`;
+                            }
+
+                            // attach the buttons for each event
+                            eventsScheduleContent += `<div style="font-size: 0.8em; width: 100%; padding-top: 0.5em;">
+                            <ons-button class="events-schedule-content-button"
+                            onclick="utopiasoftware.edoae.controller.eventsSchedulePageViewModel.viewDetails(this)"
+                            style="visibility: ${eventItem.events[index2].full_details ? 'visible': 'hidden'}"
+                            data-details='${JSON.stringify({title: eventItem.events[index2].event_description, full_details: eventItem.events[index2].full_details})}'>
+                            Full Details
+                            </ons-button>
+                            <ons-button class="events-schedule-content-button"
+                            data-details='${JSON.stringify(eventItem.events[index2].location)}'
+                            onclick="utopiasoftware.edoae.controller.eventsSchedulePageViewModel.viewLocation(this)">
+                            Location
+                            </ons-button>
+                            </div>
+                            </ons-col>`;
+                        }
+
+                        // append the event schedule content to the "Event Schedule" list
+                        $('#events-schedule-list .events-schedule-items-container', $thisPage).
+                        append(eventsScheduleContent);
+                        eventsScheduleContent = ``; // reset the content in preparation for another loop
+                    }
+
+                    // hide the page preloader progress bar
+                    $('.progress', $thisPage).css("display", "none");
+                    // display the events schedule list from display
+                    $('#events-schedule-list', $thisPage).css("display", "block");
+                }).
+                catch(function(err){ // an error occurred, so display the error message to the user
+                    console.log(err);
+                    // hide the page preloader progress bar
+                    $('.progress', $thisPage).css("display", "none");
+                    // hide the events schedule list from display
+                    $('#events-schedule-list', $thisPage).css("display", "none");
+                });
+
+                // hide the loader
+                $('#loader-modal').get(0).hide();
+
+            }
+
+        },
+
+
+        /**
+         * method is triggered when page is shown
+         *
+         * @param event
+         */
+        pageShow: function(event){
+            var $thisPage = $(event.target); // get the current page shown
+            // enable the swipeable feature for the app splitter
+            $('ons-splitter-side').attr("swipeable", true);
+
+        },
+
+        /**
+         * method is used to display more details about details about an event
+         *
+         * @param buttonElem
+         */
+        viewDetails: function(buttonElem){
+
+            // get the schedule of the event which has been attached to the clicked buttom
+            var eventDetails = JSON.parse($(buttonElem).attr('data-details'));
+            // update the content of the events-schedule-details-fixed-modal
+            $('#events-schedule-details-fixed-modal #events-schedule-details-heading').html(eventDetails.title);
+            // updater the full details content of the events-schedule-details-fixed-modal
+            $('#events-schedule-details-fixed-modal #events-schedule-details-content').html(eventDetails.full_details);
+            // open the events-schedule-details-fixed-modal
+            $('#events-schedule-details-fixed-modal').modal('open');
+        },
+
+        /**
+         * method is used to view the location of an event schedule relative to the user's location
+         *
+         * @param buttonElem
+         */
+        viewLocation: function(buttonElem){
+
+            var eventLocationArray = JSON.parse($(buttonElem).attr('data-details'));
+            // want user of lop gps collection
+            ons.notification.confirm({title: '<ons-icon icon="md-info" size="32px" ' +
+            'style="color: #1b5e20;"></ons-icon> ' + "User's Location",
+                messageHTML: '<span>This app needs access to your current location. ' +
+                'We use your current location to provide a route map to the scheduled event <br>' +
+                'Do you want to continue?</span>',
+                cancelable: false,
+                buttonLabels: ["No", "Yes"]
+            }).
+            then(function(buttonIndex){
+                if(buttonIndex === 1){ // user wants to continue
+                    // display message to user
+                    $('#loader-modal-message').html("Finding Your Location.<br>Please Wait...");
+                    return $('#loader-modal').get(0).show(); // show loader
+                }
+                else{ // user terminated action
+                    throw null;
+                }
+            }).
+            then(function(){
+                // keep the app awake for the duration of the location process
+                window.plugins.insomnia.keepAwake();
+                // get the user's current location
+                return new Promise(function(resolve, reject){
+                    navigator.geolocation.getCurrentPosition(resolve, reject,
+                        {timeout: 2 * 60 * 1000, enableHighAccuracy: true});
+                });
+            }).
+            then(function(gpsPosition){ // retrieve the returned gps values
+               return new Promise(function(resolve, reject){
+                   // display the route to the event
+                   var locationUri = "http://maps.google.com/maps?saddr=" +
+                       gpsPosition.coords.latitude + "," + gpsPosition.coords.longitude +
+                       "&daddr=" + eventLocationArray[0] + "," + eventLocationArray[1];
+
+                   // start the map app
+                   startApp.set({ /* params */
+                       "action": "ACTION_VIEW",
+                       "uri": locationUri,
+                       "component": ["com.google.android.apps.maps","com.google.android.maps.MapsActivity"]
+                   }).start(resolve, reject);
+               });
+            }).
+            then(function(){
+
+                window.plugins.insomnia.allowSleepAgain();
+                $('#loader-modal').get(0).hide(); // hide loader
+            }).
+            catch(function(err){
+
+                $('#loader-modal').get(0).hide(); // hide loader
+
+                if(!err){ // if error is null, user terminated action
+                    return;
+                }
+
+                ons.notification.alert({title: "Location Failed",
+                    messageHTML: '<ons-icon icon="md-close-circle-o" size="30px" ' +
+                    'style="color: red;"></ons-icon> <span>Sorry, we could not retrieve your current location. Check that the location setting on the device is active, ' +
+                    'then try again </span>',
+                    cancelable: true
+                });
+            });
+        },
+
+
+        /**
+         * method is used to load the events schedule data
+         *
+         * @returns {Promise} the promise resolve to an object containing the array of events schedule
+         */
+        loadEventsData: function(){
+            // retrieve the list of events
+            return Promise.resolve($.ajax(
+                {
+                    url: "events.json",
+                    type: "get",
+                    dataType: "json",
+                    timeout: 240000 // wait for 4 minutes before timeout of request
+
+                }
+            ));
+        }
 
     }
 };

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- events schedule page -->
+<ons-page id="events-schedule-page">
+
+    <ons-toolbar style="background-color: #1b5e20 !important;">
+        <div class="left">
+            <ons-toolbar-button onclick="$('#side-menu').get(0).toggle()" style="color: #eeff41">
+                <ons-icon icon="md-menu" size="16px"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center" style="text-align: left; color: #eeff41">
+            Events Schedule
+        </div>
+    </ons-toolbar>
+
+    <div class="progress" style="position: fixed; top: 57px;">
+        <div class="indeterminate"></div>
+    </div>
+    
+    <p id="events-schedule-page-message" style="font-size: 1em; color:darkgoldenrod; text-align: center; display: block">
+        <span style="font-size: 1.2em; font-weight: bolder">ALAGHODARO 2017</span><br>
+        <span style="font-size: 1.2em">Edo Investment Summit</span><br>
+        <span style="font-size: 1.2em; text-transform: uppercase">THEME: Envisioning the Future</span>
+        <span style="font-size: 1.1em; text-transform: uppercase">DATE: 10 - 12 NOVEMBER, 2017</span>
+    </p>
+
+
+    <ons-list id="events-schedule-list" style="display: none;">
+
+        <ons-row class="events-schedule-items-container">
+
+            <ons-col width="100%" class="events-schedule-item-day-indicator" style="text-align:center; margin-bottom: 0.8em">
+                Day 1: Friday, November 10, 2017
+            </ons-col>
+            <ons-col width="27%" class="events-schedule-indicator-container">
+                <span class="events-schedule-item-success-indicator"></span>
+                <span class="events-schedule-item-time-indicator">7:00 am – 9:00 am GMT + 1</span>
+            </ons-col>
+            <ons-col width="68%" class="events-schedule-content-container" style="padding-left: 0.5em">
+                <div style="font-size: 0.8em; width: 100%">
+                    <span class="events-schedule-content-label">
+                        Title
+                    </span>
+                    <span>
+                        Arrival and Registration of Delegates/Tea Break
+                    </span>
+                </div>
+                <div style="font-size: 0.8em; width: 100%">
+                    <span class="events-schedule-content-label">
+                    Moderators
+                    </span>
+                    <span style="text-transform: capitalize">Mr John Johnson, Mr John Johnson, Mr John Johnson</span>
+                </div>
+                <div style="font-size: 0.8em; width: 100%">
+                    <span class="events-schedule-content-label">
+                    Panelists
+                    </span>
+                    <span style="text-transform: capitalize">Mr John Johnson, Mr John Johnson, Mr John Johnson</span>
+                </div>
+                <div style="font-size: 0.8em; width: 100%">
+                    <span class="events-schedule-content-label">
+                    Special Guests
+                    </span>
+                    <span style="text-transform: capitalize">Mr John Johnson</span>
+                </div>
+                <div style="font-size: 0.8em; width: 100%">
+                    <span class="events-schedule-content-label">
+                    Venue
+                    </span>
+                    <span style="text-transform: capitalize">8, Ring Road</span>
+                </div>
+                <div style="font-size: 0.8em; width: 100%">
+                    <ons-button class="events-schedule-content-button"
+                                onclick="">
+                        Full Details
+                    </ons-button>
+                    <ons-button class="events-schedule-content-button"
+                                onclick="">
+                        Location
+                    </ons-button>
+                </div>
+
+            </ons-col>
+
+        </ons-row>
+
+    </ons-list>
+
+    <!--<ons-bottom-toolbar style="height: 50px; background: rgb(197, 197, 197)">
+        <ons-row>
+            <ons-col width="100%" style="text-align: center; padding-top: 0.5em">
+                <ons-button id="my-accounts-add-account-button" disabled onclick="utopiasoftware.saveup.controller.myAccountsPageViewModel.addAccountButtonClicked();">
+                    <ons-icon icon="md-plus-circle">
+                    </ons-icon> Add Account
+                </ons-button>
+            </ons-col>
+        </ons-row>
+    </ons-bottom-toolbar> -->
+
+</ons-page>
+</body>
+</html>

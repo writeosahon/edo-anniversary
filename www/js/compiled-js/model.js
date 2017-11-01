@@ -34,3 +34,11 @@ $(document).on("init", "#main-menu-page", utopiasoftware.edoae.controller.mainMe
 // listen for when the Main-Menu page is shown
 $(document).on("show", "#main-menu-page", utopiasoftware.edoae.controller.mainMenuPageViewModel.pageShow);
 
+// listen for when the Main-Menu page is hidden
+$(document).on("hide", "#main-menu-page", utopiasoftware.edoae.controller.mainMenuPageViewModel.pageHide);
+
+// listen for the initialisation of the Events Schedule page
+$(document).on("init", "#events-schedule-page", utopiasoftware.edoae.controller.eventsSchedulePageViewModel.pageInit);
+
+// listen for when the Events Schedule page is shown
+$(document).on("show", "#events-schedule-page", utopiasoftware.edoae.controller.eventsSchedulePageViewModel.pageShow);

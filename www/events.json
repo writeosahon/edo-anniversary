@@ -1,0 +1,326 @@
+{
+  "event_items": [{
+    "day": "Day 1: Friday, November 10, 2017",
+    "events":
+    [
+       {
+          "event_time": "7:00 am – 9:00 am GMT + 1",
+          "event_description": "Arrival and Registration of Delegates/Tea Break",
+          "full_details": null,
+          "moderators": [],
+          "panelists": [],
+          "location": [6.3221942, 5.6189817],
+          "venue" : null, 
+          "special_guests" : null
+      },
+      {
+          "event_time": "9.00 am – 9.10 am GMT + 1",
+          "event_description": "National Anthem and Opening Prayer",
+          "full_details": null,
+          "moderators": [],
+          "panelists": [],
+          "location": [6.3221942, 5.6189817],
+          "venue" : null
+      },
+
+      {
+        "event_time": "9.10 am – 9.20 am GMT + 1",
+        "event_description": "Introduction and Recognitions",
+        "full_details": null,
+        "moderators": ["MC"],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+
+      {
+        "event_time": "9:20 am – 9:40 am GMT + 1",
+        "event_description": "Welcome Address",
+        "full_details": null,
+        "moderators": ["Mr Asue Ighodalo – Chairman, Planning Committee"],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "9:40am – 9:50 am GMT + 1",
+        "event_description": "Goodwill Messages",
+        "full_details": null,
+        "moderators": [],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "9:50 am – 10:00 am GMT + 1",
+        "event_description": "Documentary – Edo Before, Now and into the Future",
+        "full_details": null,
+        "moderators": [],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "10:00 am – 10:30 am GMT + 1",
+        "event_description": "Governor’s Address",
+        "full_details": null,
+        "moderators": ["His Excellency, Governor Godwin Obaseki"],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "10:30 am – 10:50am GMT + 1",
+        "event_description": "Declaration of Summit Opening ",
+        "full_details": null,
+        "moderators": ["His Excellency, Professor Yemi Osibanjo - Vice president of Nigeria"],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "10:50 am – 11:00 am GMT + 1",
+        "event_description": "Tour of Exhibition Galleria by the Vice President",
+        "full_details": null,
+        "moderators": [],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null,
+        "special_guests" : ["Minister for Trade and Investment", "Minister for Budget and National Planning", "Governor Godwin Obaseki"]
+      },
+      {
+        "event_time": "11:00 am – 11:10 am GMT + 1",
+        "event_description": "Tea Break",
+        "full_details": null,
+        "moderators": [],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "11:10 am – 11:50 am GMT + 1",
+        "event_description": "Plenary I: Edo Sate: Nigeria’s Best Kept Secret",
+        "full_details": "In building a globally competitive State Economy, Edo State must identify, define and harness its competitive advantages in terms of economic, socio-political, cultural, environmental, technological and geographical factor conditions for sustainable economic growth. A stable macroeconomic environment promotes productivity. A synergy between Federal and Sub-national economic reform policies to create Edo State Investment Climate attractiveness is the key to sustainable, inclusive economic growth and development. This plenary explores the best kept secrets to unlocking economic opportunities, industrialisation and jobs in Edo State.",
+        "moderators": ["Igbinidu Inneh – Executive Chairman EIRS"],
+        "panelists": ["David Ladipo (AZURA)", "Abdulsamad Rabiu (BUA Group)", "Felix Nwabuko PRESCO", "Uwa Igiehon (Ossiomo Investment)"],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null,
+        "special_guests":["His Excellency, Godwin Obaseki, Executive Governor of Edo State"]
+      },
+      {
+        "event_time": "11:10 am – 11:50 am GMT + 1",
+        "event_description": "Townhall meeting with Host Communities of Oil Producing Areas",
+        "full_details": "Over the past few years, the number of conflicts in Nigeria has spiked.  As we continue to experience significant and rapid political, economic, social and technological shifts, leaders in all sectors must strengthen their awareness of contexts and risks.  By examining the correlation between bad governance, underdevelopment and the outbreak of deadly conflict, the panel will make a case for the peace-making potential of good governance and sound economic policy.  In addition, it is important to highlight the importance of insurance as central to mitigating such risks. These will in turn emplace the right conditions to encourage productivity and drive growth.",
+        "moderators": [],
+        "panelists": ["Minister of Petroleum"],
+        "location": [6.3220426, 5.625055],
+        "venue" : "Imaguero Hall"
+      },
+      {
+        "event_time": "11:50 am – 12:20 pm GMT + 1",
+        "event_description": "Plenary II: Institutional Reforms – Doing things differently",
+        "full_details": "A crucial element for improving Edo State Investment Climate and Attractiveness is Institutional Reforms that are targeted an improving the Ease of Doing Business. The strategic intent of the Edo Government is to create and sustain a regulatory environment that is more conducive to start and operate a local firm in Edo State. This plenary will explore the range of strategic reforms that are crucial to achieving Sub-National Competitiveness. It will provide a platform for dealing with the significant institutional arrangements that need to be put in place to meet some of the World Bank’s existing ease of doing business measures(Indicators) which are: Starting a Business, Construction Permits, Registering Property and Enforcing Contracts and some Home-grown measures like: Security, Infrastructure, Regulatory Environment, Investment Promotion, Open Government Reforms etc.",
+        "moderators": ["Ifueko Omoigui-Okaru (Compliance Professional Limited)"],
+        "panelists": ["Oladapo Afolabi fmr. HOS of Federation", "Seun Onigbinde (BUDGIT)", "Simeon Imuokemhe (Chairman Edo LG Service Commission)", "Osagie Okunbor (MD SPDC)", "Osarodion Ogie (Secretary to State Government)"],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "12.20 pm – 1:20 pm GMT + 1",
+        "event_description": "Plenary III: ECONOMIC DEVELOPMENT (Session I: Edo Agro-Industrial Revolution and Agribusiness Transformation) ",
+        "full_details": "The economic potential of Edo Agriculture Sector as a key driver of non-oil lead growth, industrial productivity and employment in key national strategic crops is central to the Edo Development Agenda. Noting the significant deficits in food systems in scaling agribusiness primary production leveraging input efficiencies, expanding primary processing capabilities, this plenary will be a platform for exploring a new Edo State Agro-Industrial model for inclusive wealth creation, bringing stakeholders together and incubating innovation for Building the Competitiveness of Edo State Agribusiness. The plenary will examine a broad range of effective strategies for fixing agriculture value chains and agribusiness financing value chains; aligning private sector, public sector and development partner investments to achieve commodity-to-Market competitiveness in Edo State agriculture sector. This will include a focus on integrated Edo State Commodity value chains access to and competitiveness in Markets, agricultural Finance transformation through rethinking Risk Governance in Edo State.",
+        "moderators": ["Shola Ladoja (Simply Green Nig. Ltd)"],
+        "panelists": ["Dr. Nteranya Sangiga – DG, IITA", "Rasheed Sarumi (Saro  Agro Services)", "Mukul Mathur (Country head OLAM Nigeria Ltd)", "Adhi Narto DUFIL int’l", "Chief E. I Odigie (President, Association of Edo Farmers)", "Felix Nwabuko (MD PRESCO Plc)", "Jayakrishnan Gopklokrishnan (Int’l Enterprise Singapore)"],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "12.20 pm – 1:20 pm GMT + 1",
+        "event_description": "Plenary III: ECONOMIC DEVELOPMENT (Session II: Infrastructure Development Imperatives of Edo Economic Development Agenda) ",
+        "full_details": "Critical Infrastructure are fundamental factor conditions and enablers of the Competitive Advantage Development of Edo State across all its economic sectors and is a prerequisite for meaningful transformation and economic development. This plenary will explore and examine the cross-cutting issues to attracting investments into Edo State Infrastructure Development, the complexities of Federal-State Infrastructure Corridor Development and the central role of Infrastructure Investment Packaging and Promotion through Public-Private Partnerships.",
+        "moderators": ["Andrew Ali, AFC"],
+        "panelists": ["Rachid Benmessaoud (World Bank Country Director)", "Onyeche Tifase (Siemens)", "Niyi Oguntoyibo (Strathmore)", "Abraham Baffoe (Proforest Int’l)", "Larry Sedu (LA Gardenia SRL)", "Aigboje Aig-Imuokhuede (CEO Corronation Capital)"],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "12.20 pm – 1:20 pm GMT + 1",
+        "event_description": "Plenary III: ECONOMIC DEVELOPMENT (Session III: Manufacturing) ",
+        "full_details": null,
+        "moderators": ["Chairman - KPMG Consultant"],
+        "panelists": ["Mr. Mohammed Abubakar (CEO - Adama Foods & Beverages Ltd)", "Abdulsamad Rabiu (BUA Group)", "Mojisola Akpata (Guinness Nig. Plc.)", "Dr. Joseph Makoju (Dangote Group)", "Mauricio Alarcon  (Nestle Plc.)"],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "12.20 pm – 1:20 pm GMT + 1",
+        "event_description": "Plenary III: ECONOMIC DEVELOPMENT (Session IV: Inventors & Innovators) ",
+        "full_details": null,
+        "moderators": ["Solomon Edebiri (Pres. Nig. Inst. of Welders)", "Mr. John Yisa-Doko"],
+        "panelists": ["Mr. Iyin Aboyeji (Co-Founder - Andela; Founder - Flutterwave)", "Mr. Azuka Ijekeye (Founder - Zuky Products)", "Damilola Olokesusi (CEO/Co-Founder - Shuttlers)", "Dr. Dan-Azumi Ibrahim (DG, NOTAP)", "Yemi Idowu (Board Chairman - Leyland International)"],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+
+
+      {
+        "event_time": "1:20 pm – 2:20 pm GMT + 1",
+        "event_description": "Lunch Time",
+        "full_details": null,
+        "moderators": [],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "2:20pm – 3:20pm GMT + 1",
+        "event_description": "Plenary Reports",
+        "full_details": null,
+        "moderators": [],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "5:00 pm – 6:00 pm GMT + 1",
+        "event_description": "Cocktails",
+        "full_details": null,
+        "moderators": [],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+      {
+        "event_time": "7:30 pm – 9:30 pm GMT + 1",
+        "event_description": "Gala Dinner - Our Vision for Edo",
+        "full_details": null,
+        "moderators": ["His Excellency, Governor Godwin Obaseki"],
+        "panelists": [],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      }
+    
+
+    ]
+  },
+
+
+  {
+    "day": "Day 2: Saturday, November 11, 2017",
+    "events":
+    [
+       {
+          "event_time": "9:30 am – 10:00 am GMT + 1",
+          "event_description": "Tea/Coffee Break",
+          "full_details": null,
+          "moderators": [],
+          "panelists": [],
+          "location": [6.3221942, 5.6189817],
+          "venue" : null
+      },
+      {
+          "event_time": "10:00am - 11:00am GMT + 1",
+          "event_description": "Theme 3: Social Welfare",
+          "full_details": "Sub-Theme 1 – Education – Basic & TVET; (Human Trafficking, STEM, Primary Healthcare, Health Insurance, Vulnerable Persons)",
+          "moderators": ["Esohe Eigbike - DFID", "Isaac Moses (CEO GOGE Africa)"],
+          "panelists": ["Giles Omezi (Laterite)", "Magdalene Aneneh Maidoh (UNESCO)", "Dr. Tunde Adekola (Education Task Team, World Bank)", "Adesuwa Ifedi (Bridge Academy)", "Hamid Bobboyi (UBEC Abuja)", "Afolabi Imoukhuede (SSA to the President)", "Kingsley Imade (Robot Academy)"],
+          "location": [6.3221942, 5.6189817],
+          "venue" : null
+      },
+      {
+        "event_time": "10:00am - 11:00am GMT + 1",
+        "event_description": "Sub-Theme 2 Panel Discussion – Healthcare",
+        "full_details": null,
+        "moderators": ["Dr. Ehanire Osagie (Minister of State, Health)"],
+        "panelists": ["Dr. B. R. Shetty - NMC", "Dr. Charles Akhimien (MobiCure)", "Rev. Fr. Anselm Adodo (Pax Herbal)", "Prof. Obehi Okojie (University of Benin)", "Chinedo Ugwu-Chinwuba (General Electric Health)", "Dr. Ola Orekunrin Founder (Flying Doctor Nigeria)"],
+        "location": [6.3221942, 5.6189817],
+        "venue" : null
+      },
+    {
+      "event_time": "10:00am - 11:00am GMT + 1",
+      "event_description": "Theme 4: Edo Creative Industry",
+      "full_details": "Investments, Local Entrepreneurship, Branding and Classification, Intellectual Property Rights, Cross Cultural Engagements, Packaging & Marketing, Talent Nurturing",
+      "moderators": [],
+      "panelists": ["Bolanle Austin Peters (Terra Kulture)", "Tayo Amusan (Chairman Persianas)", "Richard Mofe Damijo", "Obi Asika (Creative Industries Entrepreneur)", "Phillip Omodamwen (Sculptor/Educationist)", "Mark Essien (Hotels.Ng)", "Innocent Chukwuma (Ford Foundation West Africa)" ],
+      "location": [6.3221942, 5.6189817],
+      "venue" : null,
+      "special_guests" : ["Donald Duke (Fmr. Governor Cross River State)"]
+  },
+  {
+    "event_time": "11:00am - 12:00pm GMT + 1",
+    "event_description": "Plenary Reports",
+    "full_details": null,
+    "moderators": [],
+    "panelists": [],
+    "location": [6.3221942, 5.6189817],
+    "venue" : null
+  },
+  {
+    "event_time": "12:00pm - 1:00pm GMT + 1",
+    "event_description": "Lunch",
+    "full_details": null,
+    "moderators": [],
+    "panelists": [],
+    "location": [6.3221942, 5.6189817],
+    "venue" : null
+},
+{
+  "event_time": "1:00pm - 2:00pm GMT + 1",
+  "event_description": "Edo Industrial Park Ground-breaking",
+  "full_details": null,
+  "moderators": [],
+  "panelists": [],
+  "location": [6.3221942, 5.6189817],
+  "venue" : null
+},
+{
+"event_time": "2:00pm - 2:10pm GMT + 1",
+"event_description": "Closing Address by His Excellency, Governor Obaseki, Governor Edo State",
+"full_details": null,
+"moderators": [],
+"panelists": [],
+"location": [6.3221942, 5.6189817],
+"venue" : null
+},
+{
+"event_time": "2:20pm – 3:00pm GMT + 1",
+"event_description": "Media Briefings",
+"full_details": null,
+"moderators": [],
+"panelists": [],
+"location": [6.3221942, 5.6189817],
+"venue" : null
+},
+{
+  "event_time": "6:00pm – 9:00pm GMT + 1",
+  "event_description": "Cultural Show",
+  "full_details": null,
+  "moderators": [],
+  "panelists": [],
+  "location": [6.3221942, 5.6189817],
+  "venue" : null
+  }
+    ]
+  },
+
+
+
+  {
+    "day": "Day 3: Sunday, November 12, 2017",
+    "events":
+    [
+       {
+          "event_time": "9:00 am – 12:00 pm GMT + 1",
+          "event_description": "Interdenominational Service",
+          "full_details": null,
+          "moderators": [],
+          "panelists": [],
+          "location": [6.3319383, 5.6084543],
+          "venue" : "Samuel Ogbemudia Stadium-Lawn Tennis Court"
+      }
+    
+    ]
+  }
+]
+
+}
