@@ -73,7 +73,9 @@ utopiasoftware.edoae.controller = {
         document.addEventListener("online", function(){
 
             // run the Microsoft Code-Push plugin
-            codePush.sync(null, {installMode: InstallMode.ON_NEXT_RESTART, mandatoryInstallMode: InstallMode.ON_NEXT_RESTART});
+            codePush.sync(null, {updateDialog: {updateTitle: "Updated Content",
+                mandatoryUpdateMessage: "The app has updated content. Press 'Continue' to retrieve content and restart app"},
+                installMode: InstallMode.IMMEDIATE, mandatoryInstallMode: InstallMode.IMMEDIATE});
 
         }, false);
 
@@ -108,6 +110,15 @@ utopiasoftware.edoae.controller = {
             window.setTimeout(function(){
                 resolve(); // resolve the promise
             }, 0);
+        }).
+        then(function(){
+
+            // run the Microsoft Code-Push plugin
+            codePush.sync(null, {updateDialog: {updateTitle: "Updated Content",
+                mandatoryUpdateMessage: "The app has updated content. Press 'Continue' to retrieve content and restart app"},
+                installMode: InstallMode.IMMEDIATE, mandatoryInstallMode: InstallMode.IMMEDIATE});
+
+            return;
         }).
         then(function(){
             // notify the app that the app has been successfully initialised and is ready for further execution (set app ready flag to true)

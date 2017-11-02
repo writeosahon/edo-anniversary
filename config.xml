@@ -61,7 +61,7 @@
 </platform>
 
 <platform name="android" >
-    <preference name="CodePushDeploymentKey" value="GIMrSpG5IvyEDw474V4fCoMyo-EJf84a5d3a-cd65-48fa-8186-1d4c553b8f18" />
+    <preference name="CodePushDeploymentKey" value="lMFHud3OokbthgsFW13ez9NSrvpIf84a5d3a-cd65-48fa-8186-1d4c553b8f18" />
 </platform>
 
 
