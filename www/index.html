@@ -59,149 +59,33 @@
 
 <!-- splitter container housing the app -->
 <ons-splitter>
-    <ons-splitter-side id="side-menu" side="left" collapse>
+    <ons-splitter-side id="side-menu" side="left" collapse width="100px">
         <ons-page id="side-menu-page">
-            <ons-toolbar>
-                <div class="center">
-                    <ons-icon icon="md-saveup-icon-saveup-badge"></ons-icon>
-                    <span id="side-menu-username" style="font-size: 0.8em; text-transform: capitalize"></span>
-                </div>
+            <ons-toolbar modifier="noshadow" style="background-color: #1b5e20">
             </ons-toolbar>
-            <div class="row">
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('transfer cash')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center; padding-bottom: 0;">
-                            <ons-icon icon="md-saveup-icon-saveup-transfer-cash" size="22px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                Transfer Cash</div>
-                        </div>
-                    </div>
+            <div class="row" style="background-color: #1b5e20">
+                <div class="col s12 waves-effect waves-light"
+                     style="text-align: center; color: #eeff41; border-bottom: solid 1px lightgray;
+                     padding-top: 0.5em;"
+                     onclick="utopiasoftware.edoae.controller.sideMenuViewModel.sideMenuListClicked('events schedule')">
+                    <ons-icon icon="md-edoae-icon-calendar-multiple"
+                              size="20px"></ons-icon>
+                    <span style="display: block; font-size: 0.7em;">
+                        Events Schedule
+                    </span>
                 </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('verify account')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center; padding-bottom: 0;">
-                            <ons-icon icon="md-saveup-icon-saveup-verify-account2" size="22px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                Verify Account</div>
-                        </div>
-                    </div>
+
+                <div class="col s12 waves-effect waves-light"
+                     style="text-align: center; color: #eeff41; border-bottom: solid 1px lightgray;
+                padding-top: 0.5em;"
+                     onclick="utopiasoftware.edoae.controller.sideMenuViewModel.sideMenuListClicked('hotels')">
+                    <ons-icon icon="md-city-alt"
+                              size="20px"></ons-icon>
+                    <span style="display: block; font-size: 0.7em;">
+                        Hotels
+                    </span>
                 </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('my accounts')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center;  padding-bottom: 0;">
-                            <ons-icon icon="md-saveup-icon-saveup-my-accounts" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                My Accounts</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('my cards')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center;  padding-bottom: 0;">
-                            <ons-icon icon="md-saveup-icon-saveup-my-cards" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                My Cards</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('saved recipients')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center; padding-bottom: 0;">
-                            <ons-icon icon="md-saveup-icon-saveup-recipients" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                Saved Recipients</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('transaction history')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center;  padding-bottom: 0;">
-                            <ons-icon icon="md-saveup-icon-saveup-transaction-history" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                Transactions History</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('settings')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center;  padding-bottom: 0;">
-                            <ons-icon icon="md-settings-square" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                Settings
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('intro')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center;  padding-bottom: 0;">
-                            <ons-icon icon="md-tv-list" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                Intro
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('contact us')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center;  padding-bottom: 0;">
-                            <ons-icon icon="md-saveup-icon-saveup-contactus" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                Contact Us
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s6">
-                    <div class="card" style="background-color: #d1c4e9;"
-                         onclick="utopiasoftware.saveup.controller.sideMenuViewModel.sideMenuListClicked('app info')">
-                        <ons-ripple color="rgba(0,0,0,0.1)" background="rgba(0,0,0,0.2)"></ons-ripple>
-                        <div class="card-content" style="color: #311b92; text-align: center;  padding-bottom: 0;">
-                            <ons-icon icon="md-info" size="20px"></ons-icon>
-                        </div>
-                        <div class="card-action" style="color: #311b92; text-align: center">
-                            <div style="font-weight: bold; font-size: 0.7em; min-height: 1.3em; max-height: 1.3em;">
-                                App Info
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
         </ons-page>

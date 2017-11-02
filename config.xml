@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"  xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0"  xmlns:android="http://schemas.android.com/apk/res/android" android-versionCode="1" version="1.0.0" id = "utopiasoftware.edostate.anniversary"  >
 
-<name>Alaghodaro 2017</name>
-<description>Edo Anniversary Event</description>
+<name>Edo Investment Summit - Alaghodaro 2017</name>
+<description>Companion App for the Edo Investment Summit 2017</description>
 <author>Utopia Software</author>
 <content src="index.html"/>
 
@@ -30,11 +30,11 @@
 <plugin name="cordova-plugin-network-information" spec="1.2.1"/>
 <plugin name="cordova-plugin-x-toast" spec="2.6.0"/>
 <plugin name="cordova-plugin-inappbrowser" spec="1.4.0"/>
-
 <!--<plugin name="onesignal-cordova-plugin" spec="2.2.0"/>-->
 <plugin name="cordova-plugin-geolocation" spec="2.4.3"/>
 <plugin name="com.lampa.startapp" spec="0.1.4"/>
 <plugin name="cordova-plugin-insomnia" spec="4.3.0"/>
+<plugin name="cordova-plugin-code-push" spec="1.9.8-beta"/>
 
 <plugin name="cordova-plugin-whitelist" spec="1.2.2"/>
 
@@ -61,10 +61,10 @@
 </platform>
 
 <platform name="android" >
-    <preference name="CodePushDeploymentKey" value="ZeqkiiuB3zdRnK1QBK3v6JQe_EkYf84a5d3a-cd65-48fa-8186-1d4c553b8f18" />
+    <preference name="CodePushDeploymentKey" value="GIMrSpG5IvyEDw474V4fCoMyo-EJf84a5d3a-cd65-48fa-8186-1d4c553b8f18" />
 </platform>
 
-<!--
+
 <icon platform="android" src="package-assets/ldpi_icon.png" width="36" height="36" qualifier="ldpi"/>
 <icon platform="android" src="package-assets/mdpi_icon.png" width="48" height="48" qualifier="mdpi"/>
 <icon platform="android" src="package-assets/hdpi_icon.png" width="72" height="72" qualifier="hdpi"/>
@@ -78,7 +78,6 @@
 <splash platform="android" src="package-assets/mdpi_landscape.png" width="470" height="320" orientation="landscape" qualifier="land-mdpi"/>
 <splash platform="android" src="package-assets/hdpi_landscape.png" width="640" height="480" orientation="landscape" qualifier="land-hdpi"/>
 <splash platform="android" src="package-assets/xhdpi_landscape.png" width="960" height="720" orientation="landscape" qualifier="land-xhdpi"/>
--->
 
 <config-file platform="android" parent="/manifest/application" mode="merge"> 
     <activity android:launchMode="singleTop" />

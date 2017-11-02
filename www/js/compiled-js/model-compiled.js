@@ -44,4 +44,10 @@ $(document).on("init", "#events-schedule-page", utopiasoftware.edoae.controller.
 // listen for when the Events Schedule page is shown
 $(document).on("show", "#events-schedule-page", utopiasoftware.edoae.controller.eventsSchedulePageViewModel.pageShow);
 
+// listen for the initialisation of the Hotels page
+$(document).on("init", "#hotels-page", utopiasoftware.edoae.controller.hotelsPageViewModel.pageInit);
+
+// listen for when the Hotel page is shown
+$(document).on("show", "#hotels-page", utopiasoftware.edoae.controller.hotelsPageViewModel.pageShow);
+
 //# sourceMappingURL=model-compiled.js.map
