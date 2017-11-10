@@ -42,6 +42,7 @@
         "location": [6.3221889, 5.6189817],
         "venue" : null
       },
+      
       {
         "event_time": "9:40 am – 10:00 am GMT + 1",
         "event_description": "Documentary – Edo Before, Now and into the Future",
@@ -86,6 +87,7 @@
         "panelists": [],
         "location": [6.3221889, 5.6189817],
         "venue" : null
+        // "special_guests" : ["Minister for Trade and Investment", "Minister for Budget and National Planning", "Governor Godwin Obaseki"]
       },
       {
         "event_time": "11:20 am – 11:30 am GMT + 1",
@@ -106,6 +108,7 @@
         "venue" : null,
         "special_guests":["His Excellency, Godwin Obaseki, Executive Governor of Edo State"]
       },
+    
       {
         "event_time": "1:00 pm – 2:00 pm GMT + 1",
         "event_description": "Plenary II: Institutional Reforms – Doing things differently",
@@ -164,6 +167,8 @@
         "location": [6.3221889, 5.6189817],
         "venue" : null
       },
+
+
       {
         "event_time": "7:00 pm – 7:30 pm GMT + 1",
         "event_description": "Cocktails",
@@ -243,7 +248,7 @@
       "special_guests" : ["Donald Duke (Fmr. Governor Cross River State)"]
   },
   {
-    "event_time": "12:00 pm - 1:30 pm GMT + 1",
+    "event_time": "12:00 pm - 1:00 pm GMT + 1",
     "event_description": "Summit Reports",
     "full_details": null,
     "moderators": [],
@@ -253,17 +258,7 @@
   },
 
   {
-    "event_time": "1:30 pm - 2:00 pm GMT + 1",
-    "event_description": "Closing Address by His Excellency, Governor Obaseki, Governor Edo State",
-    "full_details": null,
-    "moderators": [],
-    "panelists": [],
-    "location": [6.3221889, 5.6189817],
-    "venue" : null
-    },
-
-  {
-    "event_time": "2:00 pm - 3:00 pm GMT + 1",
+    "event_time": "1:00 pm - 2:00 pm GMT + 1",
     "event_description": "Lunch",
     "full_details": null,
     "moderators": [],
@@ -272,8 +267,8 @@
     "venue" : null
 },
 {
-  "event_time": "3:00 pm - 4:00 pm GMT + 1",
-  "event_description": "Edo Industrial Park Ground-breaking - Iyanomo",
+  "event_time": "2:00 pm - 4:00 pm GMT + 1",
+  "event_description": "Benin Industrial Park Ground-breaking - Iyanomo",
   "full_details": null,
   "moderators": [],
   "panelists": [],
@@ -291,6 +286,17 @@
 "location": [6.3221889, 5.6189817],
 "venue" : null
 },
+
+{
+  "event_time": "5:00 pm - 6:00 pm GMT + 1",
+  "event_description": "Closing Address by His Excellency, Governor Obaseki, Governor Edo State",
+  "full_details": null,
+  "moderators": [],
+  "panelists": [],
+  "location": [6.3221889, 5.6189817],
+  "venue" : null
+  },
+
 {
   "event_time": "6:00 pm – 9:00 pm GMT + 1",
   "event_description": "Cultural Show – Oba Ovonramwen (Ring Road)",
@@ -316,7 +322,7 @@
           "moderators": [],
           "panelists": [],
           "location": [6.3319383, 5.6084543],
-          "venue" : "Samuel Ogbemudia Stadium-Lawn Tennis Court"
+          "venue" : "Samuel Ogbemudia Stadium - Lawn Tennis Court"
       }
     
     ]
